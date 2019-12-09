@@ -1,0 +1,13 @@
+@import '../../common-css/mixins.scss';
+
+.header {
+  height: 60px;
+  background-color: red;
+
+  @include flex-space-between;
+
+  .logo-container{
+
+  }
+}
+ 

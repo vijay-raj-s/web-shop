@@ -1,0 +1,7 @@
+.order {
+  height: 100%;
+}
+.order .main {
+  display: flex;
+  height: calc(100% - 60px);
+}
