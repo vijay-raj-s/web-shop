@@ -1,5 +1,34 @@
+@import '../../common-css/colors';
+@import '../../common-css/mixins';
+@import '../../common-css/constants';
+
 .sidebar{
-    width: 50px;
-    background: blue;
-    height: 100%;
+    width: $sidebar-width;
+    background: $secondary-brown;
+    height: calc(100%- #{$sidebar-width});
+    border-top-right-radius: 65px;
+    text-align: center;
+    padding-top: 40px;
+
+
+    div{
+        height: 50px;
+        width: 50px;
+        margin: 15px 13px;
+        background-color: white; 
+        @include flex-center;
+        @include box-shadow;
+        cursor: pointer;
+        border-radius: 5px;
+
+        .nav-icon{
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    div:hover{
+        background-color: $primary-brown;
+    }
+    
 }

@@ -3,3 +3,7 @@
   background: blue;
   height: 100%;
 }
+.sidebar .navIcon {
+  width: 40px;
+  height: 40px;
+}

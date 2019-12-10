@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './order.scss';
-import { Link, Switch, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import SearchComponent from '../search/search-component';
 import HistoryComponent from '../history/history-component';
 import CheckoutComponent from '../checkout/checkout-component';
@@ -17,6 +17,7 @@ export default class OrderComponent extends Component {
           <div className='content-section'>
             
             <Switch>
+                <Route path="/order/" exact component={SearchComponent} />
                 <Route path="/order/search" exact component={SearchComponent} />
                 <Route path="/order/history" exact component={HistoryComponent} />  
                 <Route path="/order/checkout" exact component={CheckoutComponent} />  

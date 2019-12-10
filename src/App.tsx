@@ -6,10 +6,23 @@ import LoginComponent from './login/login-component';
 import RegisterComponent from './register/register-component';
 import OrderComponent from './order/order-component';
 import SurveyComponent from './survey/survey-component';
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: '#A76D60',
+    },
+    secondary: {
+      main: '#00A676',
+    }
+  },
+});
 
 const App: React.FC =  ()  => {
   return (
     <div className="App">
+      <ThemeProvider theme={theme}>
         <Switch>
             <Route path="/" exact component={HomeComponent} /> 
             <Route path="/home" component={LoginComponent} />  
@@ -18,7 +31,8 @@ const App: React.FC =  ()  => {
             <Route path="/survey" exact component={SurveyComponent} />
             <Route path="/order" exact component={OrderComponent} />
             
-        </Switch>     
+        </Switch>  
+      </ThemeProvider>   
     </div>
   );
 }

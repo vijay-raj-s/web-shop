@@ -5,3 +5,6 @@
   display: flex;
   height: calc(100% - 60px);
 }
+.order .main .content-section {
+  width: calc(100% - $sidebar-width);
+}

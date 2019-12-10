@@ -1,8 +1,19 @@
+@import '../common-css/mixins';
+@import '../common-css/colors';
+@import '../common-css/constants';
+
+
 .order{
     height: 100%;
 
     .main{
         display: flex;
-        height: calc(100% - 60px);
+        height: calc(100% - #{$header-height});
+    
+        .content-section{
+            width: calc(100% - #{$sidebar-width});
+        }
     }
+
+    
 }

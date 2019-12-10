@@ -1,13 +1,25 @@
 @import '../../common-css/mixins.scss';
+@import '../../common-css/colors.scss';
 
 .header {
-  height: 60px;
-  background-color: red;
-
+  height: 58px;
+  border-bottom: 2px solid $primary-brown;
+  margin: 0px 75px;
   @include flex-space-between;
+  .icon{
+    height: 40px;
+    width: 40px;
+  } 
 
-  .logo-container{
+  .user{
+    @include flex-space-around;
+    width: 200px;
+  }
 
+  .profile-cart-container{
+    @include flex-space-around;
+    width: 250px;
+    color: $primary-brown;
   }
 }
  
