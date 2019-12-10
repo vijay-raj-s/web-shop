@@ -1,0 +1,11 @@
+$padding-size : 30px;
+
+.search-container{
+    width:  100%;
+    height: calc(100% - (#{$padding-size}) * 2);
+    padding: $padding-size 0px;
+
+    .search-listing{
+        height: 100%;
+    }
+}
