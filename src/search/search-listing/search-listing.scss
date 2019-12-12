@@ -1,0 +1,79 @@
+@import '../../common-css/mixins';
+@import '../../common-css/colors';
+@import '../../common-css/constants';
+
+
+.item-listing{
+    height: calc(100% - (#{$search-bar-height} + (2 * #{$search-bar-margin})) );
+    padding: 0px 30px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-y: auto;
+
+    .item-container{
+        height: 150px;
+        width: 245px;
+        margin: 10px 10px;
+        @include box-shadow;
+        background: white;
+        border-radius: 5px;
+        border-bottom: 7px solid $primary-brown;
+        display: flex;
+        //----------------------- item --------------------------------------------
+
+        .item-main{
+            width: 50%;
+            height: inherit;
+
+            .image-container{
+                height: calc(100% - 55px);
+                padding: 5px;
+                @include flex-center;
+
+                img{
+                    height: 85px;
+                }
+            }
+
+            .item-price{
+                font-size: 20px;
+                font-weight: bold;
+                height: 50px;
+                color: $primary-green;
+            }
+        }
+
+        .item-details{
+            width: 50%;
+
+            .item-title{
+                font-size: 20px;
+                font-weight: bold;
+                color: $primary-black;
+                height: 40px;
+                padding: 5px;
+            }
+
+            .item-rating{
+                height: 40px;
+                padding: 5px;
+            }
+
+            .add-to-cart{
+                height: 40px;
+                padding: 5px;
+
+                .MuiButton-label{
+                    font-size: 10px;
+                }
+            }
+
+        }
+        //-------------------------item end----------------------------------------
+
+    }
+
+    
+}

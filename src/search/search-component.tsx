@@ -7,6 +7,7 @@ import price from '../assets/images/price-filter.svg';
 import rating from '../assets/images/ratings.svg';
 
 import _ from 'lodash'; 
+import SearchListingComponent from './search-listing/search-listing-component';
 
 interface searchState  {
   showClose: boolean,
@@ -186,40 +187,11 @@ export default class SearchComponent extends Component  <{}, searchState>{
                     </Button> 
                 </div>
             </div>
-            <div className='item-listing'>
-             
-            {
-             this.state.items ? this.state.items.map((post, index) => {
-              return (
-                <div className='item-container'>
-                  <div className='item-main'> 
-                      <div className='image-container'> 
-                          <img  src={post.item_image} alt={post.item_name} />
-                      </div>
-                      <div className='item-price'>
-                          <span>€ {post.price} </span>
-                      </div> 
-
-                  </div>
-                  <div className='item-details'> 
-                      <div className='item-title'> 
-                          {post.item_name}
-                      </div>
-                      <div className='item-rating'> 
-                          {post.rating}
-                      </div> 
-                      <div className='add-to-cart'> 
-                        <Button variant="contained" color="secondary">
-                          Add to cart
-                        </Button>
-                      </div>
-                  </div> 
-              </div>
-              )
-            }) : null
-          }
-                
-            </div>
+           
+              {
+                this.state.items? <SearchListingComponent items={this.state.items}></SearchListingComponent>: null 
+              }
+               
 
           </div>
           <div className='empty-section'> </div>
