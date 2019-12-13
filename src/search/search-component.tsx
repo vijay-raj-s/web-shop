@@ -8,6 +8,7 @@ import search from '../assets/images/search.svg';
 import _ from 'lodash'; 
 import SearchListingComponent from './search-listing/search-listing-component';
 import FiltersComponent from './filters/filters-component';
+import DescriptionComponent from './description/description-component';
  
 
 interface searchState  {
@@ -107,7 +108,7 @@ export default class SearchComponent extends Component  <{}, searchState>{
                     <img className='search-icon' src={search} alt='search'/>
                     <input type="text" placeholder='Type something to search' value={this.state.searchText} onChange={e => this.searchChange(e.target.value)} onKeyPress={e => this.searchKeyPress(e)}/>
                     {
-                      this.state.showClose?   <img className='close-icon' src={close} onClick={this.clearSearch.bind(this)} alt='search'/> : <div className='empty-close'> </div>
+                      this.state.showClose?   <img className='close-icon' src={close} onClick={e => this.clearSearch()} alt='search'/> : <div className='empty-close'> </div>
                     }
                    
                 </div>
@@ -125,9 +126,7 @@ export default class SearchComponent extends Component  <{}, searchState>{
 
           </div>
           <div className='empty-section'> </div>
-          <div className='description-section'> 
-            Item description
-          </div>
+          <DescriptionComponent> </DescriptionComponent>
       </div>
     )
   }

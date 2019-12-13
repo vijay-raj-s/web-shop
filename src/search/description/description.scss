@@ -1,0 +1,11 @@
+@import '../../common-css/mixins';
+@import '../../common-css/colors';
+@import '../../common-css/constants';
+
+
+
+.description-section{
+    width: $description-section-width;
+    background-color: $secondary-brown;
+    border-top-left-radius: 65px;   
+}
