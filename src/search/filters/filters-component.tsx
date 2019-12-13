@@ -5,6 +5,11 @@ import rating from '../../assets/images/ratings.svg';
 
 import _ from 'lodash'; 
 
+// interface PriceFilter {
+//   'id' : number,
+//   'value' : string
+// }
+
 interface listingState {
   priceFilter? : any,
   ratingFilter? : any
