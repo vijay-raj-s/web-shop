@@ -1,0 +1,60 @@
+@import '../../common-css/mixins';
+@import '../../common-css/colors';
+@import '../../common-css/constants';
+
+.filters-section{
+    width: calc(#{$filter-section-width} - (2 * #{$filter-section-padding}));
+    border-bottom: 20px solid $secondary-brown;
+    padding: 0px $filter-section-padding;
+    text-align: left;
+    overflow-y: auto;
+    color : $primary-black;
+
+    .filter-heading{
+        display: flex;
+        align-items: center;
+        margin : 20px 0px;
+        font-weight: bold;
+        color: $primary-black;
+        .icon{
+            height: 40px;
+            width: 40px;
+            background-color: $secondary-brown;
+            @include flex-center;
+            margin-right : 10px;
+            @include box-shadow;
+            img{
+                height: 25px;
+                width: 25px;
+            }
+        }
+    }
+    .filter-value{
+        opacity: 0.8;
+        cursor: pointer;
+        font-size: 14px;
+    }
+
+    .filter-value:hover{
+        opacity: 1;
+        text-decoration: underline;
+     }
+
+    .filter-selected{
+        opacity: 1;
+        text-decoration: underline;
+    }
+
+    .title{
+        font-size: 20px;
+        font-weight: bold;
+        .clear-link{
+            color: red;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .clear-link:hover{
+            text-decoration: underline;
+        }
+    }
+}

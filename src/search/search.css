@@ -1,0 +1,13 @@
+.search-container {
+  width: 100%;
+  height: calc(100% - 30px);
+  padding-top: 30px;
+  display: flex;
+}
+.search-container .search-listing {
+  height: 100%;
+  width: calc(100% - 200px);
+}
+.search-container .description-section {
+  width: 200px;
+}
