@@ -44,6 +44,7 @@ $arrow-width : 50px;
 
 }
 .answer {
+    margin-left: 40px;
     font-size: 20px;
     text-align: left;
     display: inline;
@@ -54,8 +55,18 @@ $arrow-width : 50px;
     text-align: left;
 }
 
+.answer-question-container {
+    margin-right: 350px;
+    margin-left: 200px;
+}
+
 .answerUl {
     column-count: 3;
+    column-width: auto;
+}
+.question-container{
+    display: flex;
+    flex-direction: row;
 }
 
 .resultBox {
@@ -63,9 +74,40 @@ $arrow-width : 50px;
     min-width: 260px;
     height: 165px;
     border-radius: 10px;
-    font-weight: bold;
-    font-size: 20px;
     margin: 10px;
+
+    .result-percentage {
+        font-size: 20px;
+        text-align: left;
+        padding-left: 10px;
+    }
+
+    .result-container {
+        margin: 10px;
+        margin-top: 0px;
+        display: flex;
+
+        .result-img {
+            height: 120px;
+            width: 100px;
+            margin: 5px;
+            margin-top: 0px;
+    
+        }
+        .result-matches {
+            font-size: 20px;
+            text-align: left;
+            list-style-type: none;
+            margin: 10px;
+        }
+    
+    }
+    
+
+    .order-button {
+        background-color: white;
+    }
+
 }
 
 .resultSlider {

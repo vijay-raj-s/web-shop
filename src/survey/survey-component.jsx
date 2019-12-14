@@ -11,7 +11,7 @@ import ResultBoxes from './resultBoxes';
 const _categories = ["Time", "Sustainablity", "Origin", "Test", "Price"]
 const _answers = ["Espresso", "Latte Macchiato", "Cafe", "Cappuchino", "Black Coffee", "Double Espresso"]
 const _question = ["What is your favorite type of coffee?"]
-const _resultCoffeeNames = [100, 90, 80, 70, 60, 50 , 40, 30, 20, 10]
+const _resultCoffeeNames = [100, 90, 80, 70, 60, 50, 40, 30, 20, 10]
 
 export default class SurveyComponent extends Component {
   render() {
@@ -23,9 +23,13 @@ export default class SurveyComponent extends Component {
           <div className='content-section'>
             <div className="survey">
               <div className="middle-box">
-                <Question questionContent={_question} />
-                <Answers answersContent={_answers} />
-                <Categories categoryNames={_categories} />
+                <div className="question-container">
+                  <Categories categoryNames={_categories} />
+                  <div className="answer-question-container">
+                    <Question questionContent={_question} />
+                    <Answers answersContent={_answers} />
+                  </div>
+                </div>
                 <div className="line"></div>
                 <ResultBoxes resultBoxesNames={_resultCoffeeNames} />
               </div>

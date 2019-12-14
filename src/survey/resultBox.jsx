@@ -1,6 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './survey.scss';
+import CafeImg from '../assets/images/gorilla_cafe.jpg';
+import Button from '@material-ui/core/Button';
+
+
 
 class Resultbox extends React.Component {
     static displayName = 'ResultBox';
@@ -24,11 +28,11 @@ class Resultbox extends React.Component {
     }
 
     componentDidMount() {
-       
+
     }
 
     componentWillReceiveProps(nextProps) {
-       
+
     }
 
 
@@ -40,10 +44,28 @@ class Resultbox extends React.Component {
             coffeeName
         } = this.props;
 
-        
+
         return (
-          <div className='resultBox'>{coffeeName}%
-          </div>
+            <div className="resultBox">
+                <div className='result-percentage'>{coffeeName}%</div>
+                <div className="result-container">
+                    <img className="result-img" src={CafeImg}></img>
+                    <ul className="result-matches">
+                        <li>
+                            Test
+                        </li>
+                        <li>
+                            Test2
+                        </li>
+                        <li>
+                            Test3
+                        </li>
+                        <li>
+                            <Button variant="contained" color="secondary">Card</Button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         );
     }
 }
