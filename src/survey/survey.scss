@@ -1,6 +1,9 @@
-
+@import '../common-css/mixins';
+@import '../common-css/colors';
+@import '../common-css/constants';
+$arrow-width : 50px;
 .middle-box{
-    background-color: #E9E0D7;
+    background-color: $secondary-brown;
     width: auto;
     height: auto;
     margin-top: 30px;
@@ -56,13 +59,40 @@
 }
 
 .resultBox {
-    display: inline-flex;
     background-color: white;
-    width: 260px;
+    min-width: 260px;
     height: 165px;
     border-radius: 10px;
-    text-align: center;
     font-weight: bold;
     font-size: 20px;
     margin: 10px;
+}
+
+.resultSlider {
+    @include flex-center;
+
+    .resultContainer {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        width: calc(100% - #{$arrow-width});
+    }
+    
+    .arrow {
+        width: $arrow-width;
+        padding: 0px 10px;
+        .MuiButton-containedSecondary { 
+            font-size: 20px;
+            max-width: 30px;
+            min-width: 30px;
+            
+        }
+        .button-width {
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    
+
 }
