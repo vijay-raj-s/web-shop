@@ -1,13 +1,42 @@
 import React, { Component } from 'react';
 import './home.scss';
 import {  Link } from "react-router-dom"; 
+import logo from '../assets/images/LOGO.svg';
+import survey from '../assets/images/survey.svg';
+import orderFood from '../assets/images/order-food.svg';
+
+
 export default class HomeComponent extends Component {
   render() {
     return (
-      <div className="home">
-        <h1>Order Coffee </h1>  
-        <div><Link to='/survey'>Survey </Link></div>
-        <div><Link to='/order'>Order</Link></div>  
+      <div className="home-container">
+        <div className='logo-container'> 
+          <img src={logo} alt='logo'/> 
+        </div>
+
+        <div className='title-container'> 
+           Welcome Coffee Lovers!
+        </div>
+
+        <div className='path-container'>
+          <Link to='/survey'>
+          <div className='path-selection'>
+            
+                <div className='path'>
+                    <img src={survey} className='image' alt='survey'/>
+                </div>
+           
+          </div>
+          </Link>
+          <Link to='/order'>
+          <div className='path-selection'> 
+                <div className='path'> 
+                  <img src={orderFood} className='image' alt='order food'/>
+                </div> 
+          </div>  
+          </Link>
+        </div> 
+          
       </div>
     )
   }
