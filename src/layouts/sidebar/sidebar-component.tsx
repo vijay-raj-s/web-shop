@@ -10,6 +10,7 @@ import history_icon_brown from '../../assets/images/history_brown.svg';
 interface sidebarState{
   showBrownSearchIcon : boolean,
   showBrownHistoryIcon : boolean,
+  selectedNav? : Array<boolean>
 }
 
 export default class SidebarComponent extends Component <{}, sidebarState>{
@@ -19,8 +20,13 @@ export default class SidebarComponent extends Component <{}, sidebarState>{
 
     this.state = {
       showBrownSearchIcon : true,
-      showBrownHistoryIcon : true
+      showBrownHistoryIcon : true,
+      selectedNav : [true, false, false]
     }
+  }
+ 
+  navSelect(){
+
   }
 
   render() {
@@ -36,17 +42,17 @@ export default class SidebarComponent extends Component <{}, sidebarState>{
           </div>
           </Link>
           <Link to='/order/history'> 
-          <div onMouseEnter={e => this.setState({showBrownHistoryIcon: false})} onMouseLeave={e => this.setState({showBrownHistoryIcon: true})}>  
+          <div className={'' + (this.state.selectedNav ? (this.state.selectedNav[0] ? 'selected-nav' : null): null )} onMouseEnter={e => this.setState({...this.state, showBrownHistoryIcon: false})} onMouseLeave={e => this.setState({...this.state,showBrownHistoryIcon: true})}>  
             
             {
-              this.state.showBrownSearchIcon ? <img src={history_icon_brown} alt='Order history' className='nav-icon' />  : <img src={order_history_icon} alt='Order history' className='nav-icon' /> 
+              this.state.showBrownHistoryIcon ? <img src={history_icon_brown} alt='Order history' className='nav-icon' />  : <img src={order_history_icon} alt='Order history' className='nav-icon' /> 
             }
           </div>
           </Link>
           <Link to='/order/checkout'>
-          <div onMouseEnter={e => this.setState({showBrownHistoryIcon: false})} onMouseLeave={e => this.setState({showBrownHistoryIcon: true})}>
+          <div onMouseEnter={e => this.setState({...this.state, showBrownHistoryIcon: false})} onMouseLeave={e => this.setState({...this.state, showBrownHistoryIcon: true})}>
             {
-              this.state.showBrownSearchIcon ? <img src={history_icon_brown} alt='Order history' className='nav-icon' />  : <img src={order_history_icon} alt='Order history' className='nav-icon' /> 
+              this.state.showBrownHistoryIcon ? <img src={history_icon_brown} alt='Order history' className='nav-icon' />  : <img src={order_history_icon} alt='Order history' className='nav-icon' /> 
             }
           </div> 
           </Link>

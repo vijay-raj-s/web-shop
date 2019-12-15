@@ -1,0 +1,55 @@
+@import '../common-css/mixins';
+@import '../common-css/colors';
+@import '../common-css/constants';
+
+$logo-height: 50px;
+$title-height: 50px;
+
+
+.home-container{
+    height: 100%;
+    background-color: $secondary-brown;
+    .logo-container{
+        height: $logo-height;
+
+        img{
+            height: 40px;
+            width: 40px;
+        }
+    }
+
+    .title-container{
+        height: $title-height;
+        font-size: 36px;
+        color: $primary-brown;
+        
+        font-weight: bold;
+    }
+
+    .path-container{
+        height: calc(100% - #{$logo-height} - #{$title-height});
+        @include flex-space-around;
+
+        a{
+            text-decoration: none;
+            height: 70%;
+            width: 35%;
+            .path-selection{
+                width: 100%;
+                height: 100%;
+                background-color: white;
+                @include box-shadow;
+                cursor: pointer;
+                .path{
+                    @include flex-center;
+                }
+                
+            }
+    
+            .path-selection:hover{ 
+                background-color: $primary-brown; 
+            }
+        }
+        
+    }
+}
