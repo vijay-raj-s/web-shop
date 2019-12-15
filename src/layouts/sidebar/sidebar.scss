@@ -5,10 +5,11 @@
 .sidebar{
     width: $sidebar-width;
     background: $secondary-brown;
-    height: calc(100%- #{$sidebar-width});
+    height: calc(100% - #{$sidebar-width});
     border-top-right-radius: 65px;
     text-align: center;
     padding-top: 40px;
+    margin-top: 30px;
 
 
     div{
@@ -28,6 +29,10 @@
     }
 
     div:hover{
+        background-color: $primary-brown;
+    }
+
+    .nav-selected{
         background-color: $primary-brown;
     }
     
