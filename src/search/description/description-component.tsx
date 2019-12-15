@@ -10,11 +10,37 @@ import Button from '@material-ui/core/Button';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import './description.scss';
 
+interface productState  {
+  favoriteState: boolean,
+  productRate: any,
+}
 
 
+export default class DescriptionComponent extends Component <{}, productState>{
 
-export default class DescriptionComponent extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      favoriteState: false,
+      productRate: 0,
+    }
+  }
 
+  favoriteChange(){
+    this.setState({
+      favoriteState: !this.state.favoriteState
+    })
+    this.render();
+  }
+
+  ratingValue(newValue){
+    this.setState({
+      productRate: newValue,
+    })
+    this.render();
+  }
+
+  
   render() {
     return (
       <div className="description-section">
@@ -22,8 +48,12 @@ export default class DescriptionComponent extends Component {
         <div className="description-title">
           <div className="product-title">
             <label>GORILLA</label>
-            <Icon component={FavoriteBorderIcon} className="product-favorite-off"></Icon>
-            <Icon component={FavoriteIcon} className="product-favorite-on"></Icon>
+            {!this.state.favoriteState && <div className="product-favorite-off">
+            <Icon component={FavoriteBorderIcon} onClick={e => this.favoriteChange()}></Icon>
+            </div>}
+            {this.state.favoriteState && <div className="product-favorite-on">
+            <Icon component={FavoriteIcon} onClick={e => this.favoriteChange()}></Icon>
+            </div>}
           </div>
         </div>
 
@@ -31,7 +61,8 @@ export default class DescriptionComponent extends Component {
           <img src="http://localhost:3000/assets/images/granbar_cafe.jpg" alt="Granbar_Cafe" />
 
         </div>
-        <Rating className="product-rating" value={0} precision={0.5} emptyIcon={<StarBorderIcon fontSize="inherit" />} />
+        <Rating className="product-rating" value={this.state.productRate} precision={0.5} emptyIcon={<StarBorderIcon fontSize="inherit" />}
+        onChange={(event, newValue) => this.ratingValue(newValue)}/>
 
         <div className="product-price-amount">
           <div className="product-price">
@@ -60,3 +91,4 @@ export default class DescriptionComponent extends Component {
     )
   }
 }
+
