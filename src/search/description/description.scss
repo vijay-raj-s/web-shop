@@ -1,0 +1,127 @@
+@import '../../common-css/mixins';
+@import '../../common-css/colors';
+@import '../../common-css/constants';
+
+
+
+.description-section{
+    width: $description-section-width;
+    background-color: $secondary-brown;
+    border-top-left-radius: 65px;   
+}
+
+.description-title{
+    background-color: $primary-white;
+    border-top-left-radius: 65px;
+    border-bottom-left-radius: 65px;
+    margin-top: 35px;
+    width: 90%;
+    height: 60px;
+    position: relative;
+    float: right;
+    text-align: left;
+    label{
+        font-weight: bold;
+        font-size: larger;
+    }
+    .product-favorite-on{
+        position: relative;
+        float: right;
+        color: $primary-green;
+        visibility: visible;
+    }
+    .product-favorite-on:hover{
+        cursor: pointer;
+    }
+    .product-favorite-off{
+        position: relative;
+        float: right;
+        color: $primary-black;
+        visibility: visible;
+    }
+    .product-favorite-off:hover{
+        color: $primary-green;
+        cursor: pointer;
+    }
+    .product-title{
+        position: relative;
+        float: left;
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 15px;
+    }
+}
+
+.product-image{
+    background-color: $primary-white;
+    width: 50%;
+    height: 25%;
+    border-radius: 50%;
+    margin-left: 25%;
+    margin-top: 35%;
+    @include flex-center;
+
+    img{
+        width: 70%;
+        height: 70%;
+    }
+}
+
+.product-rating{
+    @include flex-center;
+    color: #D4AF37;
+    margin-top: 5%;
+    
+}
+
+.product-price-amount{
+    @include flex-center;
+    width: 70%;
+    margin: auto;
+    margin-top: 5%;
+    .product-price{
+        color: $primary-green;
+        @include flex-center;
+    }
+    .product-quantity{
+        @include flex-center;
+        width: 30%;
+            margin-left: 10px;
+    }
+    label{
+        font-weight: bold;
+        font-size: x-large;
+        margin-left: 2%;
+    }
+}
+
+.product-description{
+    color: $primary-black;
+    width: 80%;
+    height: 40px;;
+    font-weight: bold;
+    font-size: x-large;
+    margin: auto;
+    margin-top: 10%;
+    .product-description-category{
+        position: relative;
+        float: left;
+    }
+    .product-description-detail{
+        position: relative;
+        float: right;
+        font-weight: lighter;
+   }
+   border-bottom: 2px solid $primary-black;
+}
+
+.product-add-to-cart{
+    @include flex-center;
+    margin-top: 15%;
+    .product-add-to-cart-btn{
+        width: 65%;
+        font-weight: bolder;
+    }
+}
+
+.hidden { display:none; }
