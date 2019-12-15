@@ -1,0 +1,140 @@
+@import '../common-css/mixins';
+@import '../common-css/colors';
+@import '../common-css/constants';
+$arrow-width : 50px;
+.middle-box{
+    background-color: $secondary-brown;
+    width: auto;
+    height: auto;
+    margin-top: 30px;
+    border-radius: 25px;
+    padding-top: 20px;
+    padding-left: 20px;
+    margin-left: 60px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    box-sizing: border-box;
+
+    .category{
+        background-color: #A76D60;
+        width: 150px;
+        height: 55px;
+        border-radius: 10px;
+        text-align: center;
+        line-height: 55px;
+        font-weight: bold;
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+    .question {
+        display: inline;
+        font-size: 40px;
+    }
+
+    .line {
+        height: 2px;
+        width: auto;
+        margin-top: 30px;
+        margin-left: 30px;
+        margin-right: 30px;
+        background-color: #364652;
+
+    }
+
+}
+.answer {
+    margin-left: 40px;
+    font-size: 20px;
+    text-align: left;
+    display: inline;
+}
+
+.answerList {
+    list-style-type: none;
+    text-align: left;
+}
+
+.answer-question-container {
+    margin-right: 350px;
+    margin-left: 200px;
+}
+
+.answerUl {
+    column-count: 3;
+    column-width: auto;
+}
+.question-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.resultBox {
+    background-color: white;
+    min-width: 260px;
+    height: 165px;
+    border-radius: 10px;
+    margin: 10px;
+
+    .result-percentage {
+        font-size: 20px;
+        text-align: left;
+        padding-left: 10px;
+    }
+
+    .result-container {
+        margin: 10px;
+        margin-top: 0px;
+        display: flex;
+
+        .result-img {
+            height: 120px;
+            width: 100px;
+            margin: 5px;
+            margin-top: 0px;
+    
+        }
+        .result-matches {
+            font-size: 20px;
+            text-align: left;
+            list-style-type: none;
+            margin: 10px;
+        }
+    
+    }
+    
+
+    .order-button {
+        background-color: white;
+    }
+
+}
+
+.resultSlider {
+    @include flex-center;
+
+    .resultContainer {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        width: calc(100% - #{$arrow-width});
+    }
+    
+    .arrow {
+        width: $arrow-width;
+        padding: 0px 10px;
+        .MuiButton-containedSecondary { 
+            font-size: 20px;
+            max-width: 30px;
+            min-width: 30px;
+            
+        }
+        .button-width {
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    
+
+}
