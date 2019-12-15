@@ -42,6 +42,7 @@ $title-height: 50px;
                 cursor: pointer;
                 .path{
                     @include flex-center;
+                    height: 100%;
                 }
                 
             }
