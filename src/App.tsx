@@ -5,7 +5,7 @@ import HomeComponent from './home/home-component';
 import LoginComponent from './login/login-component';
 import RegisterComponent from './register/register-component';
 import OrderComponent from './order/order-component';
-import SurveyComponent from './survey/survey-component';
+import SurveyComponent from './survey/survey-component.jsx';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 
 const theme = createMuiTheme({
