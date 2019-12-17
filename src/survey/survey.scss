@@ -25,11 +25,21 @@ $arrow-width : 50px;
         font-weight: bold;
         font-size: 20px;
         margin-top: 10px;
+
+        .category-answered {
+            background-color: $primary-green;
+            width: 75px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: bold;
+
+        }
+
     }
 
     .question {
         display: inline;
-        font-size: 40px;
+        font-size: 30px;
     }
 
     .line {
@@ -136,4 +146,9 @@ $arrow-width : 50px;
 
     
 
+}
+
+.category-container{
+    display: flex;
+    flex-direction: column;
 }

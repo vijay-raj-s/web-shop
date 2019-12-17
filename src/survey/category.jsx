@@ -28,6 +28,18 @@ class Category extends React.Component {
        
     }
 
+    //TO-DO finish this function
+    markComplete(complete) {
+        var ele = document.getElementsByClassName("category");
+        if(complete == 1) {
+        }
+        if(complete == 2) {
+
+        }
+        else {
+
+        }
+    }
 
     //-- ####################################
     //-- Render
@@ -38,7 +50,9 @@ class Category extends React.Component {
         } = this.props;
 
         return (
-          <div className='category'>{categoryName}</div>
+            <button className='category'>
+              {categoryName}
+            </button>
         );
     }
 }

@@ -4,25 +4,25 @@
             "question": "What type of coffee do you normally drink at a cafe?",
             "answers": [
                 {
-                    "answer1": "Espresso"
+                    "answer": "Espresso"
                 },
                 {
-                    "answer2": "Cafe Latte"
+                    "answer": "Cafe Latte"
                 },
                 {
-                    "answer3": "Espresso"
+                    "answer": "Espresso"
                 },
                 {
-                    "answer4": "Black Coffee"
+                    "answer": "Black Coffee"
                 },
                 {
-                    "answer5": "Double Espresso"
+                    "answer": "Double Espresso"
                 },
                 {
-                    "answer6": "Cappuchino"
+                    "answer": "Cappuchino"
                 },
                 {
-                    "answer7": "Latte Macchiato"
+                    "answer": "Latte Macchiato"
                 }
             ]
         },

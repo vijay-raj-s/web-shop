@@ -46,7 +46,7 @@ class Categories extends React.Component {
             return items;
         }
         return (
-        <div> {categoryComponents()}</div>
+        <div className="category-container"> {categoryComponents()}</div>
         );
     }
 }

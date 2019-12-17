@@ -34,6 +34,7 @@ class Question extends React.Component {
             )
     }
 
+    //To-Do switch question
     switchQuestion(nextQuestion) {
         const {items} = this.state;
         return items[nextQuestion].question;
