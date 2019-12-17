@@ -23,7 +23,10 @@ export default class HomeComponent extends Component {
           <div className='path-selection'>
             
                 <div className='path'>
-                    <img src={survey} className='image' alt='survey'/>
+                    <div>
+                      <img src={survey} className='image' alt='survey'/>
+                      <div className='path-label'> Try something new! </div>
+                    </div>
                 </div>
            
           </div>
@@ -31,7 +34,11 @@ export default class HomeComponent extends Component {
           <Link to='/order'>
           <div className='path-selection'> 
                 <div className='path'> 
+                  <div>
                   <img src={orderFood} className='image' alt='order food'/>
+                  <div className='path-label'> Order Now! </div>
+                  </div>
+                  
                 </div> 
           </div>  
           </Link>

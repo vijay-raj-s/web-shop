@@ -39,15 +39,20 @@ $title-height: 50px;
                 height: 100%;
                 background-color: white;
                 @include box-shadow;
+                font-size: 36px;
+                color: $primary-brown;
+                font-weight: bold;
                 cursor: pointer;
                 .path{
                     @include flex-center;
                     height: 100%;
+
                 }
-                
+
             }
     
-            .path-selection:hover{ 
+            .path-selection:hover{  
+                color: white;
                 background-color: $primary-brown; 
             }
         }

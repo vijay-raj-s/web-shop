@@ -8,8 +8,15 @@
     width: $description-section-width;
     background-color: $secondary-brown;
     border-top-left-radius: 65px;   
+    overflow: auto;
 }
 
+@keyframes title-slide {
+    0%   {right: -280px;} 
+    100% {right: 0px;}
+}
+
+  
 .description-title{
     background-color: $primary-white;
     border-top-left-radius: 65px;
@@ -20,6 +27,7 @@
     position: relative;
     float: right;
     text-align: left;
+    animation : title-slide 1s ease; 
     label{
         font-weight: bold;
         font-size: larger;
@@ -85,8 +93,9 @@
     }
     .product-quantity{
         @include flex-center;
-        width: 30%;
-            margin-left: 10px;
+        width: 40%;
+        font-weight: bold;
+        margin-left: 10px;
     }
     label{
         font-weight: bold;
@@ -122,6 +131,14 @@
         width: 65%;
         font-weight: bolder;
     }
+    
+    .added-label{
+        color: $primary-green;
+        width: 65%;
+        font-size: 24px;
+        font-weight: bold;
+    }
 }
+
 
 .hidden { display:none; }

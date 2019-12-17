@@ -4,22 +4,40 @@ import logo from '../../assets/images/LOGO.svg';
 import profile from '../../assets/images/profile.svg';
 import shoppingCart from '../../assets/images/shopping-cart.svg';
 import Button from '@material-ui/core/Button';
+import Badge from '@material-ui/core/Badge';
+import MailIcon from '@material-ui/icons/Mail';
+import Axios from 'axios';
 
 
-
-
-interface headerState  {
-  userLoggedIn: boolean
+interface HeaderState  {
+  userLoggedIn: boolean,
+  itemsCount: number
 }
 
 
-export default class HeaderComponent extends Component <{}, headerState>{
+
+export default class HeaderComponent extends Component <{}, HeaderState>{
 
   constructor(props){
     super(props);
     this.state = {
-      userLoggedIn : true
+      userLoggedIn : true,
+      itemsCount: 0
     }
+
+    this.startPolling();
+  }
+
+  async startPolling(){
+    setInterval(e => { 
+      let url = 'http://localhost:3001/cartItems'; 
+      Axios.get(url)
+      .then(res => {
+        const count = res.data.length;
+        this.setState({ itemsCount : count });
+      })
+    }, 1000);
+
   }
 
   render() {
@@ -38,7 +56,12 @@ export default class HeaderComponent extends Component <{}, headerState>{
             </div>
              
            }
-           <div> <img className='icon' src={shoppingCart} alt='cart' /> </div>
+           <div>
+           <Badge badgeContent={this.state.itemsCount} color="secondary">
+            
+              <img className='icon' src={shoppingCart} alt='cart' />  
+           </Badge>
+          </div>
          </div>
       </div>
     )
