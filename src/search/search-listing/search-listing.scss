@@ -17,9 +17,10 @@
         width: 245px;
         margin: 10px 10px;
         @include box-shadow;
+        cursor: pointer;
         background: white;
         border-radius: 5px;
-        border-bottom: 7px solid $primary-brown;
+        border-bottom: 7px solid transparent;
         display: flex;
         //----------------------- item --------------------------------------------
 
@@ -55,10 +56,14 @@
                 height: 40px;
                 padding: 5px;
             }
+            
 
             .item-rating{
                 height: 40px;
                 padding: 5px;
+                .product-rating{
+                    height: 30px;
+                }
             }
 
             .add-to-cart{
@@ -70,10 +75,21 @@
                 }
             }
 
+            .added-label{
+                font-size: 14px;
+                color: $primary-green;
+                height: 40px;
+                padding: 5px;
+                width: 100px;
+            }
+
         }
         //-------------------------item end----------------------------------------
 
     }
 
+    .item-container:hover, .item-selected{
+        border-bottom: 7px solid $primary-brown;
+    }
     
 }

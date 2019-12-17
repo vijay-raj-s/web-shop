@@ -7,7 +7,28 @@ import CheckoutComponent from '../checkout/checkout-component';
 import HeaderComponent from '../layouts/header/header-component';
 import SidebarComponent from '../layouts/sidebar/sidebar-component';
 
-export default class OrderComponent extends Component {
+interface OrderState{
+  cartItems : number
+}
+
+
+export default class OrderComponent extends Component <{}, OrderState>{
+
+  constructor(props){
+    super(props);
+    this.state = {
+      cartItems: 0
+    }
+  }
+
+  setCartItems(item){
+    console.log('set items');
+    debugger;
+    this.setState({
+      cartItems : item
+    })
+  }
+
   render() {
     return (
       <div className="order">
@@ -18,7 +39,9 @@ export default class OrderComponent extends Component {
             
             <Switch>
                 <Route path="/order/" exact component={SearchComponent} />
-                <Route path="/order/search" exact component={SearchComponent} />
+                <Route path="/order/search" exact render={(props) => 
+                  <SearchComponent  {...props} setCartItems='1'/> 
+                } />
                 <Route path="/order/history" exact component={HistoryComponent} />  
                 <Route path="/order/checkout" exact component={CheckoutComponent} />  
             </Switch>

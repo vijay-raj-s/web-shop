@@ -10,13 +10,18 @@ import Button from '@material-ui/core/Button';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import './description.scss';
 
-interface productState  {
+interface ProductState  {
   favoriteState: boolean,
   productRate: any,
 }
 
+interface ProductProps{
+  item: any,
+  setCartItems: Function
+}
 
-export default class DescriptionComponent extends Component <{}, productState>{
+
+export default class DescriptionComponent extends Component <ProductProps, ProductState>{
 
   constructor(props){
     super(props);
@@ -40,6 +45,9 @@ export default class DescriptionComponent extends Component <{}, productState>{
     this.render();
   }
 
+  addToCart(){
+    this.props.setCartItems(this.props.item);
+  }
   
   render() {
     return (
@@ -47,7 +55,7 @@ export default class DescriptionComponent extends Component <{}, productState>{
 
         <div className="description-title">
           <div className="product-title">
-            <label>GORILLA</label>
+            <label>{this.props.item.item_name}</label>
             {!this.state.favoriteState && <div className="product-favorite-off">
             <Icon component={FavoriteBorderIcon} onClick={e => this.favoriteChange()}></Icon>
             </div>}
@@ -58,7 +66,7 @@ export default class DescriptionComponent extends Component <{}, productState>{
         </div>
 
         <div className="product-image">
-          <img src="http://localhost:3000/assets/images/granbar_cafe.jpg" alt="Granbar_Cafe" />
+          <img src={this.props.item.item_image} alt="Granbar_Cafe" />
 
         </div>
         <Rating className="product-rating" value={this.state.productRate} precision={0.5} emptyIcon={<StarBorderIcon fontSize="inherit" />}
@@ -67,24 +75,27 @@ export default class DescriptionComponent extends Component <{}, productState>{
         <div className="product-price-amount">
           <div className="product-price">
           <Icon component={EuroIcon} ></Icon>
-            <label>18,60  </label>
-            <TextField className="product-quantity" size="small" defaultValue="1" type="number" InputLabelProps={{}} variant="outlined" />
+            <label>{this.props.item.price} </label>
+            <TextField className="product-quantity" size="small" defaultValue="1" type="number" InputLabelProps={{}} inputProps={{ min: "0", max: "10", step: "1" }}  variant="outlined"   />
           </div>
         </div>
 
         <div className="product-description">
           <label className="product-description-category">Weight</label>
-          <label className="product-description-detail">1000 g</label>
+          <label className="product-description-detail">{this.props.item.weight} g</label>
         </div>
 
         <div className="product-description">
           <label className="product-description-category">Origin</label>
-          <label className="product-description-detail">Brooklyn, NY</label>
+          <label className="product-description-detail">{this.props.item.origin}</label>
         </div>
 
 
         <div className="product-add-to-cart">
-          <Button className="product-add-to-cart-btn" color="secondary" variant="contained" startIcon={<AddShoppingCartIcon />}>Add to Cart</Button>
+          {
+            this.props.item.isChecked ? <div className='added-label'> Added to cart </div> : <Button className="product-add-to-cart-btn" color="secondary" onClick={e => this.addToCart()} variant="contained" startIcon={<AddShoppingCartIcon />}>Add to Cart</Button> 
+          }
+          
         </div>
 
       </div>
