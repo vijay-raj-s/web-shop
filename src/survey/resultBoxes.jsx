@@ -27,9 +27,9 @@ class ResultBoxes extends React.Component {
     scrollSlider(isLeft) {
         var ele = document.getElementById("resultContainer");
         if (isLeft) {
-            ele.scrollLeft -= 260;
+            ele.scrollLeft -= 280;
         } else {
-            ele.scrollLeft += 260;
+            ele.scrollLeft += 280;
         }
     }
 
@@ -45,15 +45,12 @@ class ResultBoxes extends React.Component {
     //-- ####################################
     //-- Render
     //-- ####################################
-    render() {
-        const {
-            resultBoxesNames
-        } = this.props;
+    render() { 
 
         const resultboxComponents = () => {
             const items = []
             this.props.resultBoxesNames.forEach(element => {
-                items.push(<ResultBox coffeeName={element} />)
+                items.push(<ResultBox item={element} />)
             });
             return items;
         }

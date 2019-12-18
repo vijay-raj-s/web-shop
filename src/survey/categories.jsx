@@ -1,6 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import Category from './category';
+import PropTypes from 'prop-types'; 
+import Button from '@material-ui/core/Button';
 
 class Categories extends React.Component {
     static displayName = 'Categories';
@@ -29,6 +29,9 @@ class Categories extends React.Component {
        
     }
 
+    setQuestionIndex(){
+
+    }
 
     //-- ####################################
     //-- Render
@@ -38,15 +41,14 @@ class Categories extends React.Component {
             categoryNames
         } = this.props;
 
-        const categoryComponents = ()=>{
-            const items = []
-            this.props.categoryNames.forEach(element => {
-                items.push(<Category categoryName={element} />)
-            });
-            return items;
-        }
         return (
-        <div className="category-container"> {categoryComponents()}</div>
+        <div className="category-container"> 
+            {categoryNames.map(name => {
+                return (<Button variant="contained" color="primary" onClick={e => this.setQuestionIndex(true)}> 
+                            {name}
+                        </Button>)
+            })}
+        </div>
         );
     }
 }

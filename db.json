@@ -3,6 +3,7 @@
     {
       "id": 1,
       "question": "What type of coffee do you normally drink at a cafe?",
+      "question_type": "type",
       "answers": [
         {
           "answer": "Espresso"
@@ -11,16 +12,10 @@
           "answer": "Cafe Latte"
         },
         {
-          "answer": "Espresso"
-        },
-        {
           "answer": "Black Coffee"
         },
         {
           "answer": "Double Espresso"
-        },
-        {
-          "answer": "Cappuchino"
         },
         {
           "answer": "Latte Macchiato"
@@ -30,111 +25,97 @@
     {
       "id": 2,
       "question": "At what time do you normally drink your coffee?",
+      "question_type": "time",
       "answers": [
         {
-          "answer1": "Before 5 a.m."
+          "answer": "Before 5 a.m."
         },
         {
-          "answer2": "Between 5 and 7 a.m."
+          "answer": "Between 5 and 7 a.m."
         },
         {
-          "answer3": "Between 7 and 9 a.m."
+          "answer": "Between 7 and 9 a.m."
         },
         {
-          "answer4": "Between 9 and 11 a.m."
+          "answer": "Between 9 and 11 a.m."
         },
         {
-          "answer5": "After 11 a.m."
+          "answer": "After 11 a.m."
         },
         {
-          "answer6": "Afternoon"
+          "answer": "Afternoon"
         },
         {
-          "answer7": "Evening"
+          "answer": "Evening"
         }
       ]
     },
     {
       "id": 3,
       "question": "From which continent should the coffee come from?",
+      "question_type": "origin",
       "answers": [
         {
-          "answer1": "Africa"
+          "answer": "Africa"
         },
         {
-          "answer2": "Asia"
+          "answer": "Asia"
         },
         {
-          "answer3": "Europe"
+          "answer": "Europe"
         },
         {
-          "answer4": "North America"
+          "answer": "North America"
         },
         {
-          "answer5": "South America"
+          "answer": "South America"
         },
         {
-          "answer6": "Australia"
+          "answer": "Australia"
         },
         {
-          "answer7": "Other"
+          "answer": "Other"
         }
       ]
     },
     {
       "id": 4,
       "question": "Do you want the coffee to be Fairtrade?",
+      "question_type": "quality",
       "answers": [
         {
-          "answer1": "Yes"
+          "answer": "Yes"
         },
         {
-          "answer2": "No"
+          "answer": "No"
         }
       ]
     },
     {
       "id": 5,
-      "question": "How much do you want to spend on your coffee",
-      "answers": [
-        {
-          "answer1": "less than 10"
-        },
-        {
-          "answer2": "between 10 and 15"
-        },
-        {
-          "answer3": "between 15 and 20"
-        },
-        {
-          "answer4": "between 20 and 25"
-        }
-      ]
-    },
-    {
-      "id": 6,
       "question": "How many days a week you drink at least one cup of coffee?",
+      "question_type": "days",
       "answers": [
         {
-          "answer1": "1"
+          "answer": "1"
         },
         {
-          "answer2": "2"
+          "answer": "2"
         },
         {
-          "answer3": "3"
+          "answer": "3"
         },
         {
-          "answer4": "4"
+          "answer": "4"
         },
         {
-          "answer5": "5"
+          "answer": "5"
         },
         {
-          "answer6": "6"
+          "answer": "6"
         },
         {
-          "answer7": "7"
+          "answer": "7"
         }
       ]
     }
@@ -173,80 +154,70 @@
       "item_name": "Gran Bar",
       "item_description": "description about gran bar",
       "item_image": "http://localhost:3000/assets/images/granbar_cafe.jpg",
-      "price": 4.5
+      "price": 4.5,
+      "type": "Double Espresso",
+      "origin": "South America",
+      "time": "Afternoon",
+      "days": 2,
+      "quality": true,
+      "weight": 100,
+      "rating": 4.5
     },
-    {
-      "id": 2,
-      "item_name": "Hamburg Cafe",
-      "item_description": "description about hamburg_cafe ",
-      "item_image": "http://localhost:3000/assets/images/hamburg_cafe.jpg",
-      "price": 11.5
-    },
-    {
-      "id": 3,
-      "item_name": "Hafursa Coffee",
-      "item_description": "description about hafursa_coffee ",
-      "item_image": "http://localhost:3000/assets/images/hafursa_coffee.png",
-      "price": 19.5
-    },
-    {
-      "id": 4,
-      "item_name": "Schwarzwild",
-      "item_description": "description about schwarzwild ",
-      "item_image": "http://localhost:3000/assets/images/schwarzwild.jpg",
-      "price": 9.5
-    },
-    {
-      "id": 5,
-      "item_name": "Gorilla Cafe",
-      "item_description": "description about gorilla cafe",
-      "item_image": "http://localhost:3000/assets/images/gorilla_cafe.jpg",
-      "price": 19.5
-    },
-    {
-      "id": 6,
-      "item_name": "dinzler cafe",
-      "item_description": "description about dinzler cafe",
-      "item_image": "http://localhost:3000/assets/images/dinzler_cafe.jpg",
-      "price": 10
-    },
-    {
-      "id": 5,
-      "item_name": "Gorilla Cafe",
-      "item_description": "description about gorilla cafe",
-      "item_image": "http://localhost:3000/assets/images/gorilla_cafe.jpg",
-      "price": 19.5
-    },
-    {
-      "id": 6,
-      "item_name": "dinzler cafe",
-      "item_description": "description about dinzler cafe",
-      "item_image": "http://localhost:3000/assets/images/dinzler_cafe.jpg",
-      "price": 10
-    },
-    {
-      "id": 5,
-      "item_name": "Gorilla Cafe",
-      "item_description": "description about gorilla cafe",
-      "item_image": "http://localhost:3000/assets/images/gorilla_cafe.jpg",
-      "price": 19.5
-    },
-    {
-      "id": 6,
-      "item_name": "dinzler cafe",
-      "item_description": "description about dinzler cafe",
-      "item_image": "http://localhost:3000/assets/images/dinzler_cafe.jpg",
-      "price": 10
-    }
-  ],
-  "cartItems": [
     {
       "id": 2,
       "item_name": "Hamburg Cafe",
       "item_description": "description about hamburg_cafe ",
       "item_image": "http://localhost:3000/assets/images/hamburg_cafe.jpg",
       "price": 11.5,
-      "isChecked": true
+      "type": "Cafe Latte",
+      "origin": "Europe",
+      "time": "Between 9 and 11 a.m.",
+      "days": 2,
+      "quality": true,
+      "weight": 300,
+      "rating": 2.5
+    },
+    {
+      "id": 3,
+      "item_name": "Hafursa Coffee",
+      "item_description": "description about hafursa_coffee ",
+      "item_image": "http://localhost:3000/assets/images/hafursa_coffee.png",
+      "price": 19.5,
+      "type": "Espresso",
+      "origin": "Europe",
+      "time": "Evening",
+      "days": 2,
+      "quality": true,
+      "weight": 1000,
+      "rating": 1.5
+    },
+    {
+      "id": 4,
+      "item_name": "Schwarzwild",
+      "item_description": "description about schwarzwild ",
+      "item_image": "http://localhost:3000/assets/images/schwarzwild.jpg",
+      "price": 9.5,
+      "type": "Latte Macchiato",
+      "origin": "Australia",
+      "time": "After 11 a.m.",
+      "days": 2,
+      "quality": true,
+      "weight": 100,
+      "rating": 4
+    },
+    {
+      "id": 5,
+      "item_name": "Gorilla Cafe",
+      "item_description": "description about gorilla cafe",
+      "item_image": "http://localhost:3000/assets/images/gorilla_cafe.jpg",
+      "price": 19.5,
+      "type": "Latte Macchiato",
+      "origin": "Asia",
+      "time": "Between 9 and 11 a.m.",
+      "days": 2,
+      "quality": true,
+      "weight": 700,
+      "rating": 1.5
     },
     {
       "id": 6,
@@ -254,6 +225,114 @@
       "item_description": "description about dinzler cafe",
       "item_image": "http://localhost:3000/assets/images/dinzler_cafe.jpg",
       "price": 10,
+      "type": "Espresso",
+      "origin": "South America",
+      "time": "Before 5 a.m.",
+      "days": 2,
+      "quality": true,
+      "weight": 900,
+      "rating": 5
+    },
+    {
+      "id": 5,
+      "item_name": "Gorilla Cafe",
+      "item_description": "description about gorilla cafe",
+      "item_image": "http://localhost:3000/assets/images/gorilla_cafe.jpg",
+      "price": 19.5,
+      "type": "Latte Macchiato",
+      "origin": "North America",
+      "time": "Before 5 a.m.",
+      "days": 2,
+      "quality": true,
+      "weight": 400,
+      "rating": 4
+    },
+    {
+      "id": 6,
+      "item_name": "dinzler cafe",
+      "item_description": "description about dinzler cafe",
+      "item_image": "http://localhost:3000/assets/images/dinzler_cafe.jpg",
+      "price": 10,
+      "type": "Black Coffee",
+      "origin": "Europe",
+      "time": "Between 9 and 11 a.m.",
+      "days": 2,
+      "quality": true,
+      "weight": 400,
+      "rating": 3
+    },
+    {
+      "id": 5,
+      "item_name": "Gorilla Cafe",
+      "item_description": "description about gorilla cafe",
+      "item_image": "http://localhost:3000/assets/images/gorilla_cafe.jpg",
+      "price": 19.5,
+      "type": "Cappuchino",
+      "origin": "Asia",
+      "time": "Afternoon",
+      "days": 2,
+      "quality": true,
+      "weight": 700,
+      "rating": 4.5
+    },
+    {
+      "id": 6,
+      "item_name": "dinzler cafe",
+      "item_description": "description about dinzler cafe",
+      "item_image": "http://localhost:3000/assets/images/dinzler_cafe.jpg",
+      "price": 10,
+      "type": "Cappuchino",
+      "origin": "Australia",
+      "time": "Before 5 a.m.",
+      "days": 2,
+      "quality": true,
+      "weight": 800,
+      "rating": 2
+    }
+  ],
+  "cartItems": [
+    {
+      "id": 5,
+      "item_name": "Gorilla Cafe",
+      "item_description": "description about gorilla cafe",
+      "item_image": "http://localhost:3000/assets/images/gorilla_cafe.jpg",
+      "price": 19.5,
+      "type": "Cappuchino",
+      "origin": "Asia",
+      "time": "Afternoon",
+      "days": 2,
+      "quality": true,
+      "weight": 700,
+      "rating": 4.5
+    },
+    {
+      "id": 3,
+      "item_name": "Hafursa Coffee",
+      "item_description": "description about hafursa_coffee ",
+      "item_image": "http://localhost:3000/assets/images/hafursa_coffee.png",
+      "price": 19.5,
+      "type": "Espresso",
+      "origin": "Europe",
+      "time": "Evening",
+      "days": 2,
+      "quality": true,
+      "weight": 1000,
+      "rating": 1.5,
+      "isChecked": true
+    },
+    {
+      "id": 2,
+      "item_name": "Hamburg Cafe",
+      "item_description": "description about hamburg_cafe ",
+      "item_image": "http://localhost:3000/assets/images/hamburg_cafe.jpg",
+      "price": 11.5,
+      "type": "Cafe Latte",
+      "origin": "Europe",
+      "time": "Between 9 and 11 a.m.",
+      "days": 2,
+      "quality": true,
+      "weight": 300,
+      "rating": 2.5,
       "isChecked": true
     }
   ]

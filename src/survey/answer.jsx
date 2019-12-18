@@ -1,6 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './survey.scss';
+import './survey.scss'; 
+import FormGroup from '@material-ui/core/FormGroup';
+import FormControlLabel from '@material-ui/core/FormControlLabel'; 
+import Checkbox from '@material-ui/core/Checkbox';
+import _ from 'lodash'; 
 
 
 class Answer extends React.Component {
@@ -8,11 +12,7 @@ class Answer extends React.Component {
 
     static propTypes = {
         answerName: PropTypes.string.isRequired
-    };
-
-    static defaultProps = {
-        answerName: 'Default Answer'
-    };
+    }; 
 
     constructor(props, context) {
         super(props, context);
@@ -20,62 +20,66 @@ class Answer extends React.Component {
         this.state = {
             error: null,
             isLoaded: false,
-            items: []
+            itemsChecked: [],
         };
     }
 
     componentDidMount() {
-        fetch("http://localhost:3001/survey")
-            .then(res => res.json())
-            .then(
-                (result) => {
-                    this.setState({
-                        isLoaded: true,
-                        items: result
-                    });
-                },
-                (error) => {
-                    this.setState({
-                        isLoaded: true,
-                        error
-                    });
-                }
-            )
+        debugger;
+        
+        this.props.answersContent.map(element => {
+            element.isChecked = false
+        });
+
+        
     }
 
-    componentWillReceiveProps(nextProps) {
-
+    componentWillReceiveProps(nextProps) { 
     }
 
-    //TO-DO pass the answers so the answer.jsx can use them
-    showAnswers(){
-        const {
-            items
-        } = this.state;
-        for(var i = 0; i < items[3].answers.length; i++ ){
 
+    handleChange(answer, index){
+        let items = this.state.itemsChecked;
+        this.props.answersContent[index].isChecked = !this.props.answersContent[index].isChecked; 
+        if(!answer.isChecked){
+            items.push(answer);
+        }else{
+            let index = _.indexOf(items);
+            items.splice(index, 1);
         }
-        return <div className="answer"> </div>
+        debugger;
+        this.setState({
+            itemsChecked: items
+        })
+
     }
 
     //-- ####################################
     //-- Render
     //-- ####################################
     render() {
-        const {
-            error,
-            isLoaded,
-            items
-        } = this.state;
-        if (error) {
-            return <div>Error: {error.message}</div>;
-        } else if (!isLoaded) {
-            return <div>Loading...</div>
-        } else {
-            return (
-                <div>{this.showAnswers()}</div>
-            );
-        }
+        return (
+           
+           <div className='answer-list'>
+            {
+                this.props.answersContent ? this.props.answersContent.map((element, index ) => {
+                    return (
+                        <div className='answer-item'>
+                            <FormGroup> 
+                                <FormControlLabel
+                                control={<Checkbox checked={element.isChecked} onChange={e => this.handleChange(element, index)} value={element.answer} />}
+                                label={element.answer}
+                                 />
+                            </FormGroup>
+                        </div>
+                      ) 
+                })  : null 
+            } 
+            </div>
+        )
+        
+        
+                
     }
 }
 
