@@ -25,7 +25,6 @@ class Resultbox extends React.Component {
     }
 
     componentDidMount() {
-        debugger;
         this.setState({
             item : this.props.item
         });
@@ -50,9 +49,18 @@ class Resultbox extends React.Component {
                 this.state.item ?
                     <div className="resultBox">
                     
-                        <div className='result-percentage'>{this.state.percentage}%</div>
+                        <div className='result-percentage'>{this.state.item.percentage}%</div>
                         <div className="result-container">
-                            <img className="result-img" src={this.state.item.item_image}></img>
+                            <div> <img className="result-img" src={this.state.item.item_image}></img> </div>
+                            {this.state.item.presetMatches ? 
+                                <div> 
+                                    { this.state.item.presetMatches.time ?  <div> Time </div> : null }
+                                    { this.state.item.presetMatches.quality ?  <div> Type </div> : null }
+                                    { this.state.item.presetMatches.type ?  <div> Quality </div> : null }
+                                    { this.state.item.presetMatches.origin ?  <div> Origin </div> : null }
+                                    { this.state.item.presetMatches.days ?  <div> Days </div> : null }    
+                                </div>
+                            : null}
                             
                         </div>
                     </div>  : null 

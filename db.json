@@ -97,25 +97,25 @@
       "question_type": "days",
       "answers": [
         {
-          "answer": "1"
+          "answer": 1
         },
         {
-          "answer": "2"
+          "answer": 2
         },
         {
-          "answer": "3"
+          "answer": 3
         },
         {
-          "answer": "4"
+          "answer": 4
         },
         {
-          "answer": "5"
+          "answer": 5
         },
         {
-          "answer": "6"
+          "answer": 6
         },
         {
-          "answer": "7"
+          "answer": 7
         }
       ]
     }
@@ -159,7 +159,7 @@
       "origin": "South America",
       "time": "Afternoon",
       "days": 2,
-      "quality": true,
+      "quality": "Yes",
       "weight": 100,
       "rating": 4.5
     },
@@ -173,7 +173,7 @@
       "origin": "Europe",
       "time": "Between 9 and 11 a.m.",
       "days": 2,
-      "quality": true,
+      "quality": "Yes",
       "weight": 300,
       "rating": 2.5
     },
@@ -187,7 +187,7 @@
       "origin": "Europe",
       "time": "Evening",
       "days": 2,
-      "quality": true,
+      "quality": "No",
       "weight": 1000,
       "rating": 1.5
     },
@@ -201,7 +201,7 @@
       "origin": "Australia",
       "time": "After 11 a.m.",
       "days": 2,
-      "quality": true,
+      "quality": "Yes",
       "weight": 100,
       "rating": 4
     },
@@ -215,7 +215,7 @@
       "origin": "Asia",
       "time": "Between 9 and 11 a.m.",
       "days": 2,
-      "quality": true,
+      "quality": "No",
       "weight": 700,
       "rating": 1.5
     },
@@ -229,7 +229,7 @@
       "origin": "South America",
       "time": "Before 5 a.m.",
       "days": 2,
-      "quality": true,
+      "quality": "No",
       "weight": 900,
       "rating": 5
     },
@@ -243,7 +243,7 @@
       "origin": "North America",
       "time": "Before 5 a.m.",
       "days": 2,
-      "quality": true,
+      "quality": "Yes",
       "weight": 400,
       "rating": 4
     },
@@ -257,7 +257,7 @@
       "origin": "Europe",
       "time": "Between 9 and 11 a.m.",
       "days": 2,
-      "quality": true,
+      "quality": "Yes",
       "weight": 400,
       "rating": 3
     },
@@ -271,7 +271,7 @@
       "origin": "Asia",
       "time": "Afternoon",
       "days": 2,
-      "quality": true,
+      "quality": "Yes",
       "weight": 700,
       "rating": 4.5
     },
@@ -285,7 +285,7 @@
       "origin": "Australia",
       "time": "Before 5 a.m.",
       "days": 2,
-      "quality": true,
+      "quality": "Yes",
       "weight": 800,
       "rating": 2
     }
@@ -301,7 +301,7 @@
       "origin": "Asia",
       "time": "Afternoon",
       "days": 2,
-      "quality": true,
+      "quality": "Yes",
       "weight": 700,
       "rating": 4.5
     },
@@ -315,7 +315,7 @@
       "origin": "Europe",
       "time": "Evening",
       "days": 2,
-      "quality": true,
+      "quality": "Yes",
       "weight": 1000,
       "rating": 1.5,
       "isChecked": true
@@ -330,7 +330,7 @@
       "origin": "Europe",
       "time": "Between 9 and 11 a.m.",
       "days": 2,
-      "quality": true,
+      "quality": "Yes",
       "weight": 300,
       "rating": 2.5,
       "isChecked": true

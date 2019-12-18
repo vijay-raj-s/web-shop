@@ -9,10 +9,7 @@ import _ from 'lodash';
 
 class Answer extends React.Component {
     static displayName = 'Answer';
-
-    static propTypes = {
-        answerName: PropTypes.string.isRequired
-    }; 
+ 
 
     constructor(props, context) {
         super(props, context);
@@ -21,37 +18,31 @@ class Answer extends React.Component {
             error: null,
             isLoaded: false,
             itemsChecked: [],
+            answers: []
         };
     }
 
-    componentDidMount() {
-        debugger;
-        
-        this.props.answersContent.map(element => {
-            element.isChecked = false
+    componentDidMount() { 
+        this.setState({
+            answers: this.props.answersContent
         });
-
-        
     }
 
-    componentWillReceiveProps(nextProps) { 
+ 
+
+    componentDidUpdate(prevProps) {
+        if (prevProps.answersContent !== this.props.answersContent) {
+            this.setState({
+                answers: this.props.answersContent
+            });
+        }
     }
 
 
     handleChange(answer, index){
-        let items = this.state.itemsChecked;
-        this.props.answersContent[index].isChecked = !this.props.answersContent[index].isChecked; 
-        if(!answer.isChecked){
-            items.push(answer);
-        }else{
-            let index = _.indexOf(items);
-            items.splice(index, 1);
-        }
-        debugger;
-        this.setState({
-            itemsChecked: items
-        })
-
+        let answers = this.state.answers;
+        answers[index].isChecked = !answers[index].isChecked; 
+        this.props.setNewState(answers, this.props.questionIndex)
     }
 
     //-- ####################################
@@ -62,7 +53,7 @@ class Answer extends React.Component {
            
            <div className='answer-list'>
             {
-                this.props.answersContent ? this.props.answersContent.map((element, index ) => {
+                this.state.answers ? this.state.answers.map((element, index ) => {
                     return (
                         <div className='answer-item'>
                             <FormGroup> 

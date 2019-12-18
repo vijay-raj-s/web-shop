@@ -49,7 +49,7 @@ class ResultBoxes extends React.Component {
 
         const resultboxComponents = () => {
             const items = []
-            this.props.resultBoxesNames.forEach(element => {
+            this.props.resultBoxesNames.map(element => {
                 items.push(<ResultBox item={element} />)
             });
             return items;
@@ -60,10 +60,10 @@ class ResultBoxes extends React.Component {
                     <Button variant="contained" color="secondary" onClick={e => this.scrollSlider(true)}> <img className="button-width" src={LeftArrow} alt="leftArrow"/>  </Button>
                 </div>
                 <div className="resultContainer" id="resultContainer"> {resultboxComponents()}</div>
-                    <div className="arrow" >
-                        <Button variant="contained" color="secondary" onClick={e => this.scrollSlider(false)}><img className="button-width" src={RightArrow} alt="rightArrow"/> </Button>
-                    </div>
+                <div className="arrow" >
+                    <Button variant="contained" color="secondary" onClick={e => this.scrollSlider(false)}><img className="button-width" src={RightArrow} alt="rightArrow"/> </Button>
                 </div>
+            </div>
             
                 );
             }
