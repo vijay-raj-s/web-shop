@@ -30,7 +30,17 @@ $card-details-width: 30%;
             max-height: calc(100% - #{$checkout-label-height} - #{$checkout-total-height} - 4px);
             overflow-y: auto;
             border: 1px solid #c0c0c0;
-            > div{
+
+            .no-items{
+                font-size: 18px;
+                height: 40px;
+                text-align: center;
+                color: $primary-brown;   
+                @include flex-center;
+                @include box-shadow;
+                padding: 0px 15px;
+            }
+            .table-row{
                 height: 100px;    
                 @include flex-space-between;
                 @include box-shadow;
@@ -48,7 +58,7 @@ $card-details-width: 30%;
                 }
             }
 
-            > div:hover{
+            .table-row:hover{
                 border-left: 4px solid $primary-brown;
             }
             
@@ -64,6 +74,10 @@ $card-details-width: 30%;
                 align-items: center;
             }
 
+            .item-price{
+                color: $primary-green;
+            }
+
             .item-remove{
                 width: 100px;
                 display: flex;
@@ -77,6 +91,14 @@ $card-details-width: 30%;
         }
         .checkout-total{
             height: $checkout-total-height;
+            @include flex-space-between;
+            > div{
+                width: 100px;
+            }
+
+            .total-price{
+                color: $primary-green;
+            }
         }
     }
 

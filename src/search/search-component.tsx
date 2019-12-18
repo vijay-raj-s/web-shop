@@ -130,6 +130,26 @@ export default class SearchComponent extends Component  <searchProps, searchStat
     
   }  
 
+  setItemQuantity(item, quantity){
+    let items = this.state.items; 
+    let currentItem = _.find(items, function(o) { return o.id === item.id });
+    currentItem.quantity = quantity;
+    if(!currentItem.fixedPrice){
+      currentItem.fixedPrice = currentItem.price;
+    }
+    currentItem.price = (currentItem.fixedPrice * quantity);
+    items.map(e => {
+      if(e.id === item.id){
+        e = item;
+      }
+    })
+    debugger;
+
+    this.setState({
+      items: items
+    })
+  }
+
   render() {
      
     return (
@@ -160,7 +180,7 @@ export default class SearchComponent extends Component  <searchProps, searchStat
           </div>
           <div className='empty-section'> </div>
           {
-            this.state.selectedItem ? <DescriptionComponent setCartItems={this.addItemForCheckout.bind(this)} item={this.state.selectedItem}> </DescriptionComponent> : null
+            this.state.selectedItem ? <DescriptionComponent setItemQuantity={this.setItemQuantity.bind(this)} setCartItems={this.addItemForCheckout.bind(this)} item={this.state.selectedItem}> </DescriptionComponent> : null
           }
           
       </div>

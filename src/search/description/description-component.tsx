@@ -17,7 +17,8 @@ interface ProductState  {
 
 interface ProductProps{
   item: any,
-  setCartItems: Function
+  setCartItems: Function,
+  setItemQuantity: Function
 }
 
 
@@ -48,6 +49,11 @@ export default class DescriptionComponent extends Component <ProductProps, Produ
   addToCart(){
     this.props.setCartItems(this.props.item);
   }
+
+  addItemQuantity( e){
+    let quantity = e.target.value;
+    this.props.setItemQuantity(this.props.item, quantity)
+  }
   
   render() {
     return (
@@ -76,7 +82,7 @@ export default class DescriptionComponent extends Component <ProductProps, Produ
           <div className="product-price">
           <Icon component={EuroIcon} ></Icon>
             <label>{this.props.item.price} </label>
-            <TextField className="product-quantity" size="small" defaultValue="1" type="number" InputLabelProps={{}} inputProps={{ min: "0", max: "10", step: "1" }}  variant="outlined"   />
+            <TextField className="product-quantity" onChange={e => this.addItemQuantity(e)} size="small" defaultValue="1" type="number" InputLabelProps={{}} inputProps={{ min: "0", max: "10", step: "1" }}  variant="outlined"   />
           </div>
         </div>
 

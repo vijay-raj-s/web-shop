@@ -98,7 +98,11 @@ $middle-margin : 30px;
             height: 200px;
             border-radius: 10px;
             margin: 10px;
-    
+            .item-name{
+                font-size: 18px;
+                color: $primary-black;
+                font-weight: bold;
+            }
             .result-percentage {
                 font-size: 20px;
                 text-align: left;

@@ -43,7 +43,7 @@ export default class SearchListingComponent extends Component <listingProps, lis
       <div className='item-listing'>
       {
        
-       this.state.items ? this.state.items.map((item, index) => {
+       this.state.items && this.state.items.length ? this.state.items.map((item, index) => {
          return (
           <div className='item-container' onClick={e => this.props.setCurrentItem(item)}>
             <div className='item-main'> 
@@ -75,7 +75,7 @@ export default class SearchListingComponent extends Component <listingProps, lis
             </div> 
         </div>
          )
-       }) : null
+       }) : <div className='no-items'> No items found </div>
        
      }
      </div>

@@ -234,8 +234,8 @@
       "rating": 5
     },
     {
-      "id": 5,
-      "item_name": "Gorilla Cafe",
+      "id": 7,
+      "item_name": "Gorilla Cafe ",
       "item_description": "description about gorilla cafe",
       "item_image": "http://localhost:3000/assets/images/gorilla_cafe.jpg",
       "price": 19.5,
@@ -248,7 +248,7 @@
       "rating": 4
     },
     {
-      "id": 6,
+      "id": 8,
       "item_name": "dinzler cafe",
       "item_description": "description about dinzler cafe",
       "item_image": "http://localhost:3000/assets/images/dinzler_cafe.jpg",
@@ -262,7 +262,7 @@
       "rating": 3
     },
     {
-      "id": 5,
+      "id": 9,
       "item_name": "Gorilla Cafe",
       "item_description": "description about gorilla cafe",
       "item_image": "http://localhost:3000/assets/images/gorilla_cafe.jpg",
@@ -276,7 +276,7 @@
       "rating": 4.5
     },
     {
-      "id": 6,
+      "id": 10,
       "item_name": "dinzler cafe",
       "item_description": "description about dinzler cafe",
       "item_image": "http://localhost:3000/assets/images/dinzler_cafe.jpg",
@@ -290,94 +290,5 @@
       "rating": 2
     }
   ],
-  "cartItems": [
-    {
-      "id": 5,
-      "item_name": "Gorilla Cafe",
-      "item_description": "description about gorilla cafe",
-      "item_image": "http://localhost:3000/assets/images/gorilla_cafe.jpg",
-      "price": 19.5,
-      "type": "Cappuchino",
-      "origin": "Asia",
-      "time": "Afternoon",
-      "days": 2,
-      "quality": "Yes",
-      "weight": 700,
-      "rating": 4.5
-    },
-    {
-      "id": 3,
-      "item_name": "Hafursa Coffee",
-      "item_description": "description about hafursa_coffee ",
-      "item_image": "http://localhost:3000/assets/images/hafursa_coffee.png",
-      "price": 19.5,
-      "type": "Espresso",
-      "origin": "Europe",
-      "time": "Evening",
-      "days": 2,
-      "quality": "Yes",
-      "weight": 1000,
-      "rating": 1.5,
-      "isChecked": true
-    },
-    {
-      "id": 2,
-      "item_name": "Hamburg Cafe",
-      "item_description": "description about hamburg_cafe ",
-      "item_image": "http://localhost:3000/assets/images/hamburg_cafe.jpg",
-      "price": 11.5,
-      "type": "Cafe Latte",
-      "origin": "Europe",
-      "time": "Between 9 and 11 a.m.",
-      "days": 2,
-      "quality": "Yes",
-      "weight": 300,
-      "rating": 2.5,
-      "isChecked": true
-    },
-    {
-      "id": 4,
-      "item_name": "Schwarzwild",
-      "item_description": "description about schwarzwild ",
-      "item_image": "http://localhost:3000/assets/images/schwarzwild.jpg",
-      "price": 9.5,
-      "type": "Latte Macchiato",
-      "origin": "Australia",
-      "time": "After 11 a.m.",
-      "days": 2,
-      "quality": "Yes",
-      "weight": 100,
-      "rating": 4,
-      "isChecked": true
-    },
-    {
-      "id": 1,
-      "item_name": "Gran Bar",
-      "item_description": "description about gran bar",
-      "item_image": "http://localhost:3000/assets/images/granbar_cafe.jpg",
-      "price": 4.5,
-      "type": "Double Espresso",
-      "origin": "South America",
-      "time": "Afternoon",
-      "days": 2,
-      "quality": "Yes",
-      "weight": 100,
-      "rating": 4.5,
-      "isChecked": true
-    },
-    {
-      "id": 6,
-      "item_name": "dinzler cafe",
-      "item_description": "description about dinzler cafe",
-      "item_image": "http://localhost:3000/assets/images/dinzler_cafe.jpg",
-      "price": 10,
-      "type": "Black Coffee",
-      "origin": "Europe",
-      "time": "Between 9 and 11 a.m.",
-      "days": 2,
-      "quality": "Yes",
-      "weight": 400,
-      "rating": 3
-    }
-  ]
+  "cartItems": []
 }

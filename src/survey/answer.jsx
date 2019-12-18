@@ -21,6 +21,7 @@ class Answer extends React.Component {
     }
 
     componentDidMount() { 
+        debugger;
         this.setState({
             answers: this.props.answersContent
         });

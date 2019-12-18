@@ -67,7 +67,7 @@ class Resultbox extends React.Component {
                             
                         </div>
                         <div>
-                             {/* <Button variant="contained" aria-label="Add Item to cart" color="secondary" onClick={e => this.addToCart(this.state.item)}> Add to Cart</Button> */}
+                             <div className='item-name'> {this.state.item.item_name} </div>
                         </div>
                     </div>  : null 
                 }
