@@ -4,7 +4,7 @@ import logo from '../../assets/images/LOGO.svg';
 import profile from '../../assets/images/profile.svg';
 import shoppingCart from '../../assets/images/shopping-cart.svg';
 import Button from '@material-ui/core/Button';
-import Badge from '@material-ui/core/Badge'; 
+import Badge from '@material-ui/core/Badge';
 import Axios from 'axios';
 
 
