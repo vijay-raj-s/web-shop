@@ -44,7 +44,7 @@ class Categories extends React.Component {
         return (
         <div className="category-container"> 
             {categoryNames.map(name => {
-                return (<Button variant="contained" color="primary" onClick={e => this.setQuestionIndex(true)}> 
+                return (<Button variant="contained" aria-label="select category" color="primary" onClick={e => this.setQuestionIndex(true)}> 
                             {name}
                         </Button>)
             })}

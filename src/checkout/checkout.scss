@@ -1,0 +1,153 @@
+@import '../common-css/colors';
+@import '../common-css/mixins';
+@import '../common-css/constants';
+@import '../common-css/fonts';
+
+$checkout-label-height: 30px;
+$checkout-total-height: 75px;
+$item-section-width: 70%;
+$card-details-width: 30%;
+
+.checkout {
+    display: flex;
+    height: 100%;
+
+    .items-section {
+        font-family: 'Josefin Sans', sans-serif;
+        padding-top: 40px;
+        width: $item-section-width;
+        text-align: left;
+        padding-left: 30px;
+
+        .checkout-label {
+            font-size: 24px;
+            height: $checkout-label-height;
+            border-bottom : 2px solid $primary-black;
+        }
+
+        .checkout-table{
+            // Reducing 4px since there is 2px border in header label and 2 px border for items table
+            max-height: calc(100% - #{$checkout-label-height} - #{$checkout-total-height} - 4px);
+            overflow-y: auto;
+            border: 1px solid #c0c0c0;
+            > div{
+                height: 100px;    
+                @include flex-space-between;
+                @include box-shadow;
+                padding: 0px 15px;
+                border-left: 4px solid transparent;
+                cursor: pointer;
+                .image{
+                    height: 75px;
+                }
+
+                .remove-icon{
+                    width: 25px;
+                    cursor: pointer;
+                    height: 25px;
+                }
+            }
+
+            > div:hover{
+                border-left: 4px solid $primary-brown;
+            }
+            
+            .item-image, .item-quantity{
+                width: 100px;
+                @include flex-center;
+            }
+
+            .item-name, .item-price{
+                width: 100px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+            }
+
+            .item-remove{
+                width: 100px;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+            }
+
+            
+
+            
+        }
+        .checkout-total{
+            height: $checkout-total-height;
+        }
+    }
+
+    .card-details-section {
+        width: $card-details-width;
+        font-family: 'Anton', sans-serif;
+        padding: 30px;
+
+        .card-details{
+            background-color: #E9E0D7;
+            height: 100%;
+            border-radius: 5px;
+
+            .heading{
+                font-size: 40px;
+                font-weight: bold;
+                color: $primary-brown;
+            }
+            
+            .card-type{
+                @include flex-space-around;
+                height: 150px;
+
+                .master{
+                    height: 150px;
+                }
+
+                .visa{
+                    height: 100px;
+                }
+            }
+
+            .card-name, .card-number, .card-expiry{
+                padding: 0px 20px;
+                margin-top: 15px;
+                .label{
+                    text-align: left;
+                    width: 100%;
+                    color: $primary-brown;
+                }
+
+                .input{
+                    text-align: left;
+                    width: 100%;
+                    color: $primary-brown;
+
+                    input{ 
+                        width: calc(100% - 10px);
+                        height: 50px;
+                        padding-left: 10px;
+                        outline: none;
+                        color: $primary-brown;
+                    }
+
+                    input::placeholder{
+                        color: $primary-brown;
+                    }
+                }
+            }
+
+            .checkout-button{
+                height: 100px;
+                @include flex-center;
+
+                .MuiButton-containedPrimary{
+                    height: calc(100% - 40px);
+                    width: calc(100% - 40px);
+                    font-size: 20px;
+                    font-family: 'Anton', sans-serif;
+                }
+            }
+        }
+    }
+}

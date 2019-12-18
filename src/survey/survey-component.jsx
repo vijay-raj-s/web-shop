@@ -30,7 +30,7 @@ export default class SurveyComponent extends Component {
       const response = await fetch(url);
       const data = await response.json();
       data.map(e => {
-        e.percentage = 0; 
+        return e.percentage = 0; 
       })
       this.setState({ items: data});
     } catch (error) {
@@ -55,7 +55,10 @@ export default class SurveyComponent extends Component {
         if(answer.isChecked){
           presets[question.question_type].push(answer.answer);
         }
+        return null;
       })
+
+      return null;
     })
 
     let items = this.state.items;
@@ -86,7 +89,7 @@ export default class SurveyComponent extends Component {
       }
 
       item.percentage = ((match/5) * 100);
-      
+      return null;
     })
     console.log(items);
     items = _.orderBy(items, ['percentage'], ['desc']);

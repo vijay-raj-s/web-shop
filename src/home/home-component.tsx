@@ -19,7 +19,7 @@ export default class HomeComponent extends Component {
         </div>
 
         <div className='path-container'>
-          <Link to='/survey'>
+          <Link to='/survey' role='navigation' aria-label='Try our survey'>
           <div className='path-selection'>
             
                 <div className='path'>
@@ -31,7 +31,7 @@ export default class HomeComponent extends Component {
            
           </div>
           </Link>
-          <Link to='/order'>
+          <Link to='/order' role='navigation' aria-label='Go to Order Coffee page'>
           <div className='path-selection'> 
                 <div className='path'> 
                   <div>

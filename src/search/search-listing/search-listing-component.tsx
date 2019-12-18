@@ -65,7 +65,7 @@ export default class SearchListingComponent extends Component <listingProps, lis
                 </div> 
                 <div className='add-to-cart'> 
                   {
-                    item.isChecked ? <div className='added-label'> Added to Cart </div> : <Button variant="contained" color="secondary" onClick={e => this.addToCart(item)}>
+                    item.isChecked ? <div className='added-label'> Added to Cart </div> : <Button variant="contained" aria-label="Add Item to cart" color="secondary" onClick={e => this.addToCart(item)}>
                     Add to cart
                   </Button> 
                   }

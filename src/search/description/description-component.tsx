@@ -93,7 +93,7 @@ export default class DescriptionComponent extends Component <ProductProps, Produ
 
         <div className="product-add-to-cart">
           {
-            this.props.item.isChecked ? <div className='added-label'> Added to cart </div> : <Button className="product-add-to-cart-btn" color="secondary" onClick={e => this.addToCart()} variant="contained" startIcon={<AddShoppingCartIcon />}>Add to Cart</Button> 
+            this.props.item.isChecked ? <div className='added-label'> Added to cart </div> : <Button aria-label="Add to cart" className="product-add-to-cart-btn" color="secondary" onClick={e => this.addToCart()} variant="contained" startIcon={<AddShoppingCartIcon />}>Add to Cart</Button> 
           }
           
         </div>

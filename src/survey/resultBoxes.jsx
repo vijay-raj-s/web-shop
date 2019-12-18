@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ResultBox from './resultBox';
-import Button from '@material-ui/core/Button';
-import RightArrow from '../assets/images/rightArrow.svg';
-import LeftArrow from '../assets/images/leftArrow.svg';
+import Button from '@material-ui/core/Button'; 
+import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
+import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 
 class ResultBoxes extends React.Component {
     static displayName = 'ResultBoxes';
@@ -50,18 +50,18 @@ class ResultBoxes extends React.Component {
         const resultboxComponents = () => {
             const items = []
             this.props.resultBoxesNames.map(element => {
-                items.push(<ResultBox item={element} />)
+               return items.push(<ResultBox item={element} />)
             });
             return items;
         }
         return (
             <div className="resultSlider" >
-                <div className="arrow" >
-                    <Button variant="contained" color="secondary" onClick={e => this.scrollSlider(true)}> <img className="button-width" src={LeftArrow} alt="leftArrow"/>  </Button>
+                <div className="result-slider-arrow" >
+                    <Button aria-label="Go to previous question" variant="contained" color="secondary" onClick={e => this.scrollSlider(true)} startIcon={<ChevronLeftIcon />}>   </Button>
                 </div>
                 <div className="resultContainer" id="resultContainer"> {resultboxComponents()}</div>
-                <div className="arrow" >
-                    <Button variant="contained" color="secondary" onClick={e => this.scrollSlider(false)}><img className="button-width" src={RightArrow} alt="rightArrow"/> </Button>
+                <div className="result-slider-arrow" >
+                    <Button aria-label="Go to Next question" variant="contained" startIcon={<ChevronRightIcon fontSize='large'/>} color="secondary" onClick={e => this.scrollSlider(false)}> </Button>
                 </div>
             </div>
             

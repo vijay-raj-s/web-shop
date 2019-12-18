@@ -49,7 +49,7 @@ export default class HeaderComponent extends Component <{}, HeaderState>{
            {
              this.state.userLoggedIn ? <div className='user'><span> Welcome, Josephine  </span> <img className='icon' src={profile} alt='profile'/> </div>
               : <div className='login'> 
-                  <Button variant="contained" color="secondary">
+                  <Button variant="contained" color="secondary" aria-label="Login">
                     Login
                   </Button> 
             </div>

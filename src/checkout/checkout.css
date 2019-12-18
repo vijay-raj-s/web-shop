@@ -1,0 +1,16 @@
+.checkout {
+  display: flex;
+  height: 100%;
+}
+.checkout .items-section {
+  padding-top: 40px;
+  width: 75%;
+  text-align: left;
+  padding-left: 30px;
+}
+.checkout .items-section .checkout-label {
+  font-size: 20px;
+}
+.checkout .card-details-section {
+  width: 25%;
+}

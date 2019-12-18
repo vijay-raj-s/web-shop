@@ -29,8 +29,9 @@ class Question extends Component {
             let data = await response.json();
             data.map(question => {
                question.answers.map(answer =>{
-                   answer.isChecked = false
+                 return answer.isChecked = false
                })
+               return null;
             });
             this.setState({
                 isLoaded: true,
@@ -87,9 +88,9 @@ class Question extends Component {
             return (
                 <div className="question">
                     <h3>{this.state.items[this.state.questionIndex].question}</h3>
-                    { this.state.questionIndex  > 0 ? <div className='previous arrow'> <Button variant="contained" color="primary" onClick={e => this.previousQuestion()}><img className="button-width" src={LeftArrow} alt="leftArrow"/> </Button></div> : null }
+                    { this.state.questionIndex  > 0 ? <div className='previous arrow'> <Button aria-label="scroll to see previous item" variant="contained" color="primary" onClick={e => this.previousQuestion()}><img className="button-width" src={LeftArrow} alt="leftArrow"/> </Button></div> : null }
                     <div className='answer-container'><Answer answersContent={this.state.items[this.state.questionIndex].answers} questionIndex={this.state.questionIndex} setNewState={this.setNewState.bind(this)}/> </div>
-                    { this.state.questionIndex  < (this.state.items.length - 1)? <div className='next arrow'> <Button variant="contained" color="primary" onClick={e => this.nextQuestion()}><img className="button-width" src={RightArrow} alt="rightArrow"/> </Button></div>  : null }
+                    { this.state.questionIndex  < (this.state.items.length - 1)? <div className='next arrow'> <Button aria-label="scroll to see next item" variant="contained" color="primary" onClick={e => this.nextQuestion()}><img className="button-width" src={RightArrow} alt="rightArrow"/> </Button></div>  : null }
                 </div>
             );
         }

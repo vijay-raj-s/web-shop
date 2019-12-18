@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './survey.scss';  
-import _ from 'lodash';
-
+import tick from '../assets/images/tick.svg';
+import Button from '@material-ui/core/Button';
 
 class Resultbox extends React.Component {
     static displayName = 'ResultBox';
@@ -37,6 +37,9 @@ class Resultbox extends React.Component {
 
     }
 
+    addToCart(){
+
+    }
 
     //-- ####################################
     //-- Render
@@ -51,17 +54,20 @@ class Resultbox extends React.Component {
                     
                         <div className='result-percentage'>{this.state.item.percentage}%</div>
                         <div className="result-container">
-                            <div> <img className="result-img" src={this.state.item.item_image}></img> </div>
+                            <div> <img className="result-img" src={this.state.item.item_image} alt='item '></img> </div>
                             {this.state.item.presetMatches ? 
                                 <div> 
-                                    { this.state.item.presetMatches.time ?  <div> Time </div> : null }
-                                    { this.state.item.presetMatches.quality ?  <div> Type </div> : null }
-                                    { this.state.item.presetMatches.type ?  <div> Quality </div> : null }
-                                    { this.state.item.presetMatches.origin ?  <div> Origin </div> : null }
-                                    { this.state.item.presetMatches.days ?  <div> Days </div> : null }    
+                                    { this.state.item.presetMatches.time ?  <div className='preset-value'> Time  <img src={tick} alt='preset'/> </div> : null }
+                                    { this.state.item.presetMatches.quality ?  <div className='preset-value'> Type <img src={tick} alt='preset'/> </div> : null }
+                                    { this.state.item.presetMatches.type ?  <div className='preset-value' > Quality <img src={tick} alt='preset'/> </div> : null }
+                                    { this.state.item.presetMatches.origin ?  <div className='preset-value'> Origin <img src={tick} alt='preset'/> </div> : null }
+                                    { this.state.item.presetMatches.days ?  <div className='preset-value'> Days <img src={tick} alt='preset'/> </div> : null }    
                                 </div>
                             : null}
                             
+                        </div>
+                        <div>
+                             {/* <Button variant="contained" aria-label="Add Item to cart" color="secondary" onClick={e => this.addToCart(this.state.item)}> Add to Cart</Button> */}
                         </div>
                     </div>  : null 
                 }

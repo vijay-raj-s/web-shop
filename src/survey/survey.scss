@@ -83,17 +83,71 @@ $middle-margin : 30px;
                     max-width: 40px; 
                     min-height: 50px;
                     background-color: $primary-black;
-
                     img{
-                        height: 20px;
+                        width: 30px;
+                        height: 30px;
                     }
-                }
-                .button-width {
-                    width: 30px;
-                    height: 30px;
                 }
             }
 
+        }
+
+        .resultBox {
+            background-color: white;
+            min-width: 260px;
+            height: 200px;
+            border-radius: 10px;
+            margin: 10px;
+    
+            .result-percentage {
+                font-size: 20px;
+                text-align: left;
+                padding-left: 10px;
+            }
+    
+            .result-container {
+                margin: 10px;
+                margin-top: 0px;
+                display: flex;
+    
+                .result-img {
+                    height: 120px;
+                    width: 100px;
+                    margin: 5px;
+                    margin-top: 0px;
+            
+                }
+                .result-matches {
+                    font-size: 20px;
+                    text-align: left;
+                    list-style-type: none;
+                    margin: 10px;
+                }
+                .MuiButton-containedSecondary {
+                    min-height: 25px;
+                    max-height: 25px;
+                    font-size: 10px;
+                    font-weight: bold;
+                }
+                .preset-value{
+                    @include flex-space-between;
+                    width: 90px;
+                    font-size: 16px;
+                    margin-left: 15px;
+                    margin-bottom: 5px;
+    
+                    img{ 
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+            }
+            
+    
+            .order-button {
+                background-color: white;
+            }
+    
         }
 
         .line {
@@ -134,46 +188,7 @@ $middle-margin : 30px;
         flex-direction: row;
     }
 
-    .resultBox {
-        background-color: white;
-        min-width: 260px;
-        height: 165px;
-        border-radius: 10px;
-        margin: 10px;
-
-        .result-percentage {
-            font-size: 20px;
-            text-align: left;
-            padding-left: 10px;
-        }
-
-        .result-container {
-            margin: 10px;
-            margin-top: 0px;
-            display: flex;
-
-            .result-img {
-                height: 120px;
-                width: 100px;
-                margin: 5px;
-                margin-top: 0px;
-        
-            }
-            .result-matches {
-                font-size: 20px;
-                text-align: left;
-                list-style-type: none;
-                margin: 10px;
-            }
-        
-        }
-        
-
-        .order-button {
-            background-color: white;
-        }
-
-    }
+    
 
     .resultSlider {
         @include flex-center;
@@ -209,19 +224,19 @@ $middle-margin : 30px;
         background: $primary-brown; 
         }
         
-        .arrow {
+        .result-slider-arrow {
             width: $arrow-width;
             padding: 0px 10px;
             .MuiButton-containedSecondary { 
                 font-size: 20px;
                 max-width: 30px;
-                min-width: 30px;
-                
+                min-width: 30px; 
+                .button-width {
+                    min-width: 30px;
+                    min-height: 30px;
+                }
             }
-            .button-width {
-                width: 30px;
-                height: 30px;
-            }
+            
         }
 
         

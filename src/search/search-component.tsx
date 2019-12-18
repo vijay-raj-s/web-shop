@@ -113,7 +113,7 @@ export default class SearchComponent extends Component  <searchProps, searchStat
 
   async addItemForCheckout(item){
     let items = this.state.items;
-    let checkoutItem = _.find(items, function(o) { return o.id == item.id });
+    let checkoutItem = _.find(items, function(o) { return o.id === item.id });
     checkoutItem.isChecked = true;
 
     try{
@@ -146,7 +146,7 @@ export default class SearchComponent extends Component  <searchProps, searchStat
                    
                 </div>
                 <div className='button-container'> 
-                  <Button variant="contained" color="primary" onClick={e => this.startSearch()}>
+                  <Button variant="contained" color="primary" aria-label="Search for items" onClick={e => this.startSearch()}>
                       Search
                     </Button> 
                 </div>

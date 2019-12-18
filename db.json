@@ -334,6 +334,50 @@
       "weight": 300,
       "rating": 2.5,
       "isChecked": true
+    },
+    {
+      "id": 4,
+      "item_name": "Schwarzwild",
+      "item_description": "description about schwarzwild ",
+      "item_image": "http://localhost:3000/assets/images/schwarzwild.jpg",
+      "price": 9.5,
+      "type": "Latte Macchiato",
+      "origin": "Australia",
+      "time": "After 11 a.m.",
+      "days": 2,
+      "quality": "Yes",
+      "weight": 100,
+      "rating": 4,
+      "isChecked": true
+    },
+    {
+      "id": 1,
+      "item_name": "Gran Bar",
+      "item_description": "description about gran bar",
+      "item_image": "http://localhost:3000/assets/images/granbar_cafe.jpg",
+      "price": 4.5,
+      "type": "Double Espresso",
+      "origin": "South America",
+      "time": "Afternoon",
+      "days": 2,
+      "quality": "Yes",
+      "weight": 100,
+      "rating": 4.5,
+      "isChecked": true
+    },
+    {
+      "id": 6,
+      "item_name": "dinzler cafe",
+      "item_description": "description about dinzler cafe",
+      "item_image": "http://localhost:3000/assets/images/dinzler_cafe.jpg",
+      "price": 10,
+      "type": "Black Coffee",
+      "origin": "Europe",
+      "time": "Between 9 and 11 a.m.",
+      "days": 2,
+      "quality": "Yes",
+      "weight": 400,
+      "rating": 3
     }
   ]
 }
