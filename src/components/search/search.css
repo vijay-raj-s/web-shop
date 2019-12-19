@@ -3,6 +3,7 @@
   height: calc(100% - 30px);
   padding-top: 30px;
   display: flex;
+  font-family: 'Josefin Sans', sans-serif;
 }
 .search-container .search-listing {
   height: 100%;

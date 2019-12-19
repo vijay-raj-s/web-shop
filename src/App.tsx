@@ -17,6 +17,9 @@ const theme = createMuiTheme({
       main: '#00A676',
     }
   },
+  typography: { 
+    fontFamily: ['Josefin Sans'].join(',')
+  }
 });
 
 const App: React.FC =  ()  => {

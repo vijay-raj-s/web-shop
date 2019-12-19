@@ -9,7 +9,7 @@
     text-align: left;
     overflow-y: auto;
     color : $primary-black;
-
+    font-family: 'Josefin Sans', sans-serif; 
     .filter-heading{
         display: flex;
         align-items: center;
@@ -33,6 +33,7 @@
         opacity: 0.8;
         cursor: pointer;
         font-size: 14px;
+        padding: 5px 0px
     }
 
     .filter-value:hover{

@@ -18,6 +18,7 @@
 
   .profile-cart-container{
     @include flex-space-around;
+    font-family: 'Josefin Sans', sans-serif;
     width: 250px;
     color: $primary-brown;
   }
