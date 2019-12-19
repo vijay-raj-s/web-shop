@@ -4,6 +4,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `npm install`
+
+Install all the modules used in our application. 
+
 ### `npm start`
 
 Runs the app in the development mode.<br />
@@ -11,6 +15,21 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
+
+### `json-server --watch db.json --port 3001`
+
+Runs the json-server which hosts the data in port 3001. 
+Resources
+  http://localhost:3001/survey <br />
+  http://localhost:3001/price_filter <br />
+  http://localhost:3001/rating_filter <br />
+  http://localhost:3001/items <br />
+  http://localhost:3001/cartItems <br />
+
+  Home
+  http://localhost:3001
+  
+[NOTE] It is important to run the json server in 3001 since all the api calls are made to this port. 
 
 ### `npm test`
 
