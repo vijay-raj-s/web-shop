@@ -8,7 +8,7 @@ import Question from './question';
 import ResultBoxes from './resultBoxes';
 import _ from 'lodash'; 
 //Just for testing this should be added by the JSON folder
-const _categories = ["Time", "Sustainablity", "Origin", "Test", "Price"]
+const _categories = ["Type", "Time", "Origin", "Sustainablity", "Days"]
 
 export default class SurveyComponent extends Component {
 
