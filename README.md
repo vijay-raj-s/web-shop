@@ -12,6 +12,21 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
+### `json-server --watch db.json --port 3001`
+
+Runs the json-server which hosts the data in port 3001. 
+Resources
+  http://localhost:3001/survey
+  http://localhost:3001/price_filter
+  http://localhost:3001/rating_filter
+  http://localhost:3001/items
+  http://localhost:3001/cartItems
+
+  Home
+  http://localhost:3001
+  
+[NOTE] It is important to run the json server in 3001 since all the api calls are made to this port. 
+
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.<br />
