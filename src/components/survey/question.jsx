@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Answer from './answer';
 import Button from '@material-ui/core/Button';
-import RightArrow from '../assets/images/rightArrow.svg';
-import LeftArrow from '../assets/images/leftArrow.svg';
+import RightArrow from '../../assets/images/rightArrow.svg';
+import LeftArrow from '../../assets/images/leftArrow.svg';
 
 class Question extends Component {
     static displayName = 'Question';

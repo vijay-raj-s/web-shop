@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './survey.scss';  
-import tick from '../assets/images/tick.svg'; 
+import tick from '../../assets/images/tick.svg'; 
 
 class Resultbox extends React.Component {
     static displayName = 'ResultBox';

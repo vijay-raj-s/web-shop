@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './filters.scss'; 
-import price from '../../assets/images/price-filter.svg';
-import rating from '../../assets/images/ratings.svg';
+import price from '../../../assets/images/price-filter.svg';
+import rating from '../../../assets/images/ratings.svg';
 
 import _ from 'lodash'; 
 

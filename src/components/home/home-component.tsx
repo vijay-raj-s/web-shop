@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './home.scss';
 import {  Link } from "react-router-dom"; 
-import logo from '../assets/images/LOGO.svg';
-import survey from '../assets/images/survey.svg';
-import orderFood from '../assets/images/order-food.svg';
+import logo from '../../assets/images/LOGO.svg';
+import survey from '../../assets/images/survey.svg';
+import orderFood from '../../assets/images/order-food.svg';
 
 
 export default class HomeComponent extends Component {

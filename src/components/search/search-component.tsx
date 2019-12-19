@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './search.scss'; 
 import { Button } from '@material-ui/core';
-import close from '../assets/images/cancel.svg';
-import search from '../assets/images/search.svg';
+import close from '../../assets/images/cancel.svg';
+import search from '../../assets/images/search.svg';
 import axios from 'axios';
 
 

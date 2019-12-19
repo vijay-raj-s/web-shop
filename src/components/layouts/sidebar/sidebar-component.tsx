@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import './sidebar.scss'; 
 import { Link } from 'react-router-dom';
-import search_icon from '../../assets/images/search.svg';
-import checkout_icon from '../../assets/images/shopping-cart-white.svg'; 
-import search_icon_brown from '../../assets/images/search_brown.svg';
-import checkout_icon_brown from '../../assets/images/shopping-cart.svg';
-import survey from '../../assets/images/survey.svg';
+import search_icon from '../../../assets/images/search.svg';
+import checkout_icon from '../../../assets/images/shopping-cart-white.svg'; 
+import search_icon_brown from '../../../assets/images/search_brown.svg';
+import checkout_icon_brown from '../../../assets/images/shopping-cart.svg';
+import survey from '../../../assets/images/survey.svg';
 
 interface sidebarState{
   showBrownSearchIcon : boolean,

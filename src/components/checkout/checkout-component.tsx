@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './checkout.scss'; 
 import TextField from '@material-ui/core/TextField';
-import Delete from '../assets/images/cancel.svg';
-import MasterCard from '../assets/images/mastercard.svg';
-import Visa from '../assets/images/visa.svg';
+import Delete from '../../assets/images/cancel.svg';
+import MasterCard from '../../assets/images/mastercard.svg';
+import Visa from '../../assets/images/visa.svg';
 import { Button } from '@material-ui/core';
 import axios from 'axios';
 

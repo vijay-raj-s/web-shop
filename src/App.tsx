@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.scss';
 import {  Route, Switch } from "react-router-dom";
-import HomeComponent from './home/home-component';
-import LoginComponent from './login/login-component';
-import RegisterComponent from './register/register-component';
-import OrderComponent from './order/order-component';
-import SurveyComponent from './survey/survey-component.jsx';
+import HomeComponent from './components/home/home-component';
+import LoginComponent from './components/login/login-component';
+import RegisterComponent from './components/register/register-component';
+import OrderComponent from './components/order/order-component';
+import SurveyComponent from './components/survey/survey-component.jsx';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 
 const theme = createMuiTheme({
