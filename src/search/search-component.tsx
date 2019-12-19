@@ -142,6 +142,7 @@ export default class SearchComponent extends Component  <searchProps, searchStat
       if(e.id === item.id){
         e = item;
       }
+      return null;
     })
     debugger;
 

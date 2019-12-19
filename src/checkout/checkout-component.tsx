@@ -74,7 +74,7 @@ export default class CheckoutComponent extends Component <{}, CheckoutState>{
   calculateTotalPrice(){
     let total = 0;
     this.state.cartItems.map(e => {
-      total += e.price;
+      return total += e.price;
     })
 
     this.setState({

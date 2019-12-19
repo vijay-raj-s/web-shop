@@ -52,7 +52,7 @@
     },
     {
       "id": 3,
-      "question": "From which continent should the coffee come from?",
+      "question": "Which continent should the coffee come from?",
       "question_type": "origin",
       "answers": [
         {
@@ -80,7 +80,7 @@
     },
     {
       "id": 4,
-      "question": "Do you want the coffee to be Fairtrade?",
+      "question": "Do you prefer the coffee to be Fairtrade?",
       "question_type": "quality",
       "answers": [
         {
@@ -93,7 +93,7 @@
     },
     {
       "id": 5,
-      "question": "How many days a week you drink at least one cup of coffee?",
+      "question": "How many days a week do you drink at least one cup of coffee?",
       "question_type": "days",
       "answers": [
         {
@@ -165,7 +165,7 @@
     },
     {
       "id": 2,
-      "item_name": "Hamburg Cafe",
+      "item_name": "Hamburg Coffee",
       "item_description": "description about hamburg_cafe ",
       "item_image": "http://localhost:3000/assets/images/hamburg_cafe.jpg",
       "price": 11.5,
@@ -207,8 +207,8 @@
     },
     {
       "id": 5,
-      "item_name": "Gorilla Cafe",
-      "item_description": "description about gorilla cafe",
+      "item_name": "Gorilla Coffee",
+      "item_description": "description about gorilla coffee",
       "item_image": "http://localhost:3000/assets/images/gorilla_cafe.jpg",
       "price": 19.5,
       "type": "Latte Macchiato",
@@ -221,8 +221,8 @@
     },
     {
       "id": 6,
-      "item_name": "dinzler cafe",
-      "item_description": "description about dinzler cafe",
+      "item_name": "dinzler coffee",
+      "item_description": "description about dinzler coffee",
       "item_image": "http://localhost:3000/assets/images/dinzler_cafe.jpg",
       "price": 10,
       "type": "Espresso",
@@ -235,8 +235,8 @@
     },
     {
       "id": 7,
-      "item_name": "Gorilla Cafe ",
-      "item_description": "description about gorilla cafe",
+      "item_name": "Gorilla Coffee ",
+      "item_description": "description about gorilla coffee",
       "item_image": "http://localhost:3000/assets/images/gorilla_cafe.jpg",
       "price": 19.5,
       "type": "Latte Macchiato",
@@ -249,8 +249,8 @@
     },
     {
       "id": 8,
-      "item_name": "dinzler cafe",
-      "item_description": "description about dinzler cafe",
+      "item_name": "dinzler coffee",
+      "item_description": "description about dinzler coffee",
       "item_image": "http://localhost:3000/assets/images/dinzler_cafe.jpg",
       "price": 10,
       "type": "Black Coffee",
@@ -263,8 +263,8 @@
     },
     {
       "id": 9,
-      "item_name": "Gorilla Cafe",
-      "item_description": "description about gorilla cafe",
+      "item_name": "Gorilla Coffee",
+      "item_description": "description about gorilla coffee",
       "item_image": "http://localhost:3000/assets/images/gorilla_cafe.jpg",
       "price": 19.5,
       "type": "Cappuchino",
@@ -277,8 +277,8 @@
     },
     {
       "id": 10,
-      "item_name": "dinzler cafe",
-      "item_description": "description about dinzler cafe",
+      "item_name": "dinzler coffee",
+      "item_description": "description about dinzler coffee",
       "item_image": "http://localhost:3000/assets/images/dinzler_cafe.jpg",
       "price": 10,
       "type": "Cappuchino",
